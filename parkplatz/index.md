@@ -1,6 +1,6 @@
 # Parkplatz
 
-**Autor:** Max Mustermann
+**Autor:** Max Musterfrau
 
 ![](media/parkplatz.jpg)
 
