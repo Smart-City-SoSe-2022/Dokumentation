@@ -1,6 +1,6 @@
 # Krankenhaus
 
-**Autor:** Max Mustermann
+**Autor:** Marcel Sander
 
 
 ## Überblick
@@ -44,6 +44,7 @@
 | Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
 
 ## Graphische Benutzerschnittstelle
+![Untitled_Diagram drawio](https://user-images.githubusercontent.com/85035651/161708786-c23bddc6-2846-434a-80f9-1804a50289ef.png)
 
 - GUI-Mockups passend zu User Stories
 - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
