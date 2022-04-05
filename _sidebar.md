@@ -6,5 +6,4 @@
 - ***Microservices***
 
 * [**Parkplatz**](parkplatz/index)
-* [**Krankenhaus**](krankenhaus/index)
-* [**Bank**](krankenhaus/index)
+* [**Bank**](bank/index)
