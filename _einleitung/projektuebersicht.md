@@ -34,11 +34,9 @@ Beschreibung des Softwareprodukts "Smart City".
 **Smart City SWOT-Analyse**
 
 | | Chancen im Markt | Risiken im Markt |
-|---|---|---|
-| **eigene Stärke** | **Chance:** Es werden alltäglich Services der Stadt benötigt | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten |
-| | **Stärke:** Portal verlinkt und synchronisiert verschiedene Services der Stadt, sodass nicht überall einzeln nachgehakt werden muss | **Stärke:** Praxiserfahrung aus mehreren Projekten |
-| **eigene Schwäche** | **Chance:** Viele Dienste wollen in Zukunft digitalisiert werden | **Risiko:** Kunden wollen gerne wegen der Bequemlichkeit alles digital lösen |
-| | **Schwäche:** Portal beschränkt sich bisher nur auf bereits digitalisierte Dienste | **Schwäche:** Manche Dienste sind nicht genug digitalisiert und können nicht im Portal angeboten werden |
+|:---:|---|---|
+| **eigene Stärke** | **Chance:** Es werden alltäglich Services der Stadt benötigt <br><br> **Stärke:** Portal verlinkt und synchronisiert verschiedene Services der Stadt, sodass nicht überall einzeln nachgehakt werden muss | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten <br><br> **Stärke:** Praxiserfahrung aus mehreren Projekten |
+| **eigene Schwäche** | **Chance:** Viele Dienste wollen in Zukunft digitalisiert werden <br><br> **Schwäche:** Portal beschränkt sich bisher nur auf bereits digitalisierte Dienste | **Risiko:** Kunden wollen gerne wegen der Bequemlichkeit alles digital lösen <br><br> **Schwäche:** Manche Dienste sind nicht genug digitalisiert und können nicht im Portal angeboten werden |
 
 
 Fazit:
