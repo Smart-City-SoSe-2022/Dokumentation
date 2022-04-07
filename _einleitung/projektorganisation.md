@@ -74,7 +74,7 @@
   - Es wird zusammen mit dem Teammitglied eine Lösung gefunden, sei es Hilfestellung oder Entlastung im nächsten Sprint
   - Notfalls muss neu priorisiert werden
 
-### Technik
+### Technik TODO
 
 - Interne Anforderungen an Softwarequalitätsmerkmale 
   - Erweiterbarkeit
