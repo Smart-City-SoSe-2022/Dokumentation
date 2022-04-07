@@ -7,28 +7,72 @@
 ### Organisation
 
 - Verwendetes Vorgehensmodell.
+  - Scrum
 - Welche Arten von Meetings finden wöchentlich statt?
-- Geplanter Ablauf der Meetings.  
+  - Sprint Planning TODO
+  - Sprint Review TODO
+- Geplanter Ablauf der Meetings.
+  - Kurzer Bericht des Fortschritts jedes Mitglieds
+  - Problembehandlung
+  - Vorausschauende Planung
+  - Weitere Anmerkungen
 - Werkzeuge für Projektorganisation? Kanban-Board?
+  - Zur Organisation des Projekts wird in GitHub das Feature `Projects (beta)` genutzt
+  - Mit `Projects` wird ein Kanban-Board aufgebaut, welches in mehrere Spalten aufgeteilt ist
+    - Todo
+    - In Progress
+    - In Review
+    - Done
 - Wie läuft ein typischer Sprint ab?
-- Wie sieht hier ein Codereview aus?
+  - Dauer von einer Woche
+  - Am Anfang Sprint Planning
+  - Am Ende Sprint Review
+  - Bei Bedarf Meeting zwischendurch TODO
+- Wie sieht hier ein Codereview aus? TODO
+  - Es werden die erledigten Issues vorgestellt
+  - Kurz und knapp relevantere und kompliziertere Codeteile, trivialer Code sollte nicht vorgestellt werden
 - Wie und womit wird die Teamkommunikation durchgeführt?
-- Dokumentation:
+  - Hauptsächlich über Discord
+    - Per Chat in verschieden organisierten Kanälen
+    - Per Voice Chat in Meetings
+    - Verlinkung von GitHub mit Discord / Änderungen auf GitHub werden in Discord übermittelt (Webhook) TODO
+  - Kommentare zu Issues und Commits in GitHub
+- Dokumentation: TODO
   - Entwicklerdokumentation?
+    - Swagger TODO
   - Kundendokumentation?
   - Meeting-Protokoll-Dokumentation?
-- Was ist der Produktlieferzeitplan? (x-Mal-wöchentliche Auslieferungen / Continuous I/D/D)
+    - Nach jedem Meeting wird ein ausführliches Protokoll angefertigt mit besprochenen Themen und Beschlüssen
+- Was ist der Produktlieferzeitplan? (x-Mal-wöchentliche Auslieferungen / Continuous I/D/D) TODO
+  - 1 mal wöchentlich am Ende der Woche TODO
 - Wie wird der Projektfortschritt gemessen und was passiert, wenn zeitlich verschoben werden muss?
+  - Der Projektfortschritt wird mittels des Kanban Boards gemessen
+  - Bei zeitlicher Verschiebung muss für den nächsten Sprint neu priorisiert werden
 - Wer setzt Erwartungen und Ziele fest und wie werden diese dokumentiert?
+  - Jedes Teammitglied stellt seine Idee und Umfang für ein Microservice vor
+  - Der Product Owner begutachtet die Idee und den Umfang und achtet zusammen mit DevOps Engineer auf Einhaltung des Ziels und Qualität
 - Was passiert, wenn jemand Verbesserungsmöglichkeiten identifiziert?
+  - Generell werden Verbesserungsmöglichkeiten immer angehört und bei genug zeitlichem Puffer in einem Issue festgehalten
+  - Verbesserung am Code einfach an jeweiliger Stelle im Code bei GitHub kommentieren
+  - Können frei im dafür vorgesehenen Discord Text-Channel geäußert werden
 - Einschränkungen, Betriebsbedingungen, Faktoren und Risiken, die die Entwicklung beeinflussen können.
+  - Unerfahrenheit in der Entwicklung von Microservices
+  - Architekturmuster bisher unbekannt
+  - Neue Technologien
 
 ### Team
 
 - Werte und menschliche Umgangsformen
+  - Jedes Teammitglied darf seine Meinung zu verschiedenen Features oder Code frei äußern bzw. sollte es produktive Kritik sein
+  - Die Teammitglieder sprechen sich per Du an
+  - Alle Teammitglieder sind gleichgestellt, es herrscht eine flache Hierarchie
 - Wie werden Meinungsverschiedenheiten gelöst?
+  - Wenn keine Mitte unter den Teammitgliedern gefunden werden kann, versucht der Scrum Master eine bestmögliche alternative Lösung für das Problem zu finden
 - Wer legt Prioritäten und Zeitpläne fest?
+  - Der Product Owner
 - Was passiert, wenn ein Teammitglied ein Ziel nicht einhält bzw. die Erwartungen nicht erfüllt?
+  - Es wird zusammen mit dem Teammitglied eine Lösung gefunden, sei es Hilfestellung oder Entlastung im nächsten Sprint
+  - Notfalls muss neu priorisiert werden
 
 ### Technik
 
@@ -70,7 +114,7 @@ Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnv
 
 ## Grober Meilensteinplan
 
-Zuästzlich zum Kanban-Board hier Meilensteine beschreiben.
+Zusätzlich zum Kanban-Board hier Meilensteine beschreiben.
 
 **Feststehende Termine:**
 
