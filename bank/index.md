@@ -1,11 +1,11 @@
-# Krankenhaus
+# Bank
 
 **Autor:** Marcel Sander
 
 
 ## Überblick
 
-- Textuelle Beschreibung der Anwendungsdomäne
+- Die Bank der Stadt … ist für jegliche Geldanlagen zuständig. Hier wird das Geld zwischen Kunden und der Bank oder auch zwischen Kunden und Kunden bewegt.Kunden können hier Auch einen Kredit aufnehmen der nach Ihrer Persöhnlichen Bewertung unterschiedlich Groß ausfallen kann. 
 - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
@@ -44,7 +44,6 @@
 | Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
 
 ## Graphische Benutzerschnittstelle
-![Untitled_Diagram drawio](https://user-images.githubusercontent.com/85035651/161708786-c23bddc6-2846-434a-80f9-1804a50289ef.png)
 
 - GUI-Mockups passend zu User Stories
 - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
