@@ -1,6 +1,6 @@
 # Bank
 
-**Autor:** Marcel Sande
+**Autor:** Marcel Sander
 
 
 ## Überblick
