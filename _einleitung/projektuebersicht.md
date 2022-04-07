@@ -32,13 +32,13 @@ Beschreibung des Softwareprodukts "Smart City".
 * SWOT-Analyse TODO
 
 **Smart City SWOT-Analyse**
-| | \| | Chancen im Markt | Risiken im Markt |
-|---|---|---|---|
-| **eigene Stärke** | **\|** | **Chance:** Es werden alltäglich Services der Stadt benötigt | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten |
-| | **\|** | **Stärke:** Portal verlinkt und synchronisiert verschiedene Services der Stadt, sodass nicht überall einzeln nachgehakt werden muss | **Stärke:** Praxiserfahrung aus mehreren Projekten |
-| | | | |
-| **eigene Schwäche** | **\|** | **Chance:** Viele Dienste wollen in Zukunft digitalisiert werden | **Risiko:** Kunden wollen gerne wegen der Bequemlichkeit alles digital lösen |
-| | **\|** | **Schwäche:** Portal beschränkt sich bisher nur auf bereits digitalisierte Dienste | **Schwäche:** Manche Dienste sind nicht genug digitalisiert und können nicht im Portal angeboten werden |
+| | Chancen im Markt | Risiken im Markt |
+|---|---|---|
+| **eigene Stärke** | **Chance:** Es werden alltäglich Services der Stadt benötigt | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten |
+| | **Stärke:** Portal verlinkt und synchronisiert verschiedene Services der Stadt, sodass nicht überall einzeln nachgehakt werden muss | **Stärke:** Praxiserfahrung aus mehreren Projekten |
+| **eigene Schwäche** | **Chance:** Viele Dienste wollen in Zukunft digitalisiert werden | **Risiko:** Kunden wollen gerne wegen der Bequemlichkeit alles digital lösen |
+| | **Schwäche:** Portal beschränkt sich bisher nur auf bereits digitalisierte Dienste | **Schwäche:** Manche Dienste sind nicht genug digitalisiert und können nicht im Portal angeboten werden |
+
 
 Fazit:
 1. Bei der Digitalisierung anderer Dienste mitwirken
