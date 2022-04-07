@@ -32,6 +32,7 @@ Beschreibung des Softwareprodukts "Smart City".
 * SWOT-Analyse TODO
 
 **Smart City SWOT-Analyse**
+
 | | Chancen im Markt | Risiken im Markt |
 |---|---|---|
 | **eigene Stärke** | **Chance:** Es werden alltäglich Services der Stadt benötigt | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten |
