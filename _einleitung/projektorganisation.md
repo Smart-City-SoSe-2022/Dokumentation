@@ -6,37 +6,47 @@
 
 ### Organisation
 
-- Verwendetes Vorgehensmodell.
-  - Scrum
-- Welche Arten von Meetings finden wöchentlich statt?
-  - Sprint Planning TODO
-  - Sprint Review TODO
-- Geplanter Ablauf der Meetings.
-  - Kurzer Bericht des Fortschritts jedes Mitglieds
-  - Problembehandlung
-  - Vorausschauende Planung
-  - Weitere Anmerkungen
-- Werkzeuge für Projektorganisation? Kanban-Board?
-  - Zur Organisation des Projekts wird in GitHub das Feature `Projects (beta)` genutzt
-  - Mit `Projects` wird ein Kanban-Board aufgebaut, welches in mehrere Spalten aufgeteilt ist
-    - Todo
-    - In Progress
-    - In Review
-    - Done
-- Wie läuft ein typischer Sprint ab?
-  - Dauer von einer Woche
-  - Am Anfang Sprint Planning
-  - Am Ende Sprint Review
-  - Bei Bedarf Meeting zwischendurch TODO
+#### Vorgehensmodell
+
+Zur Durchführung des Softwareprojekts wird das Vorgehensmodell Scrum angewendet. Dieses Vorgehensmodell ist optimal für die Anwendung der CI/CD Pipeline, sodass die Webanwendung schrittweise aufgebaut wird und früh ein ausführbares Ergebnis vorliegt. Außerdem lässt sich mit dem Modell das Fachwissen einfach erlernen und gleichzeitig anwenden, da das Softwareprodukt schrittweise aufgebaut wird.
+
+#### Meetings
+
+Jede Woche wird ein Sprint Planning und ein Sprint Review stattfinden. <br>
+Beim Sprint Planning wird das Projektziel und die dafür verbleibenden Aufgaben betrachtet, welche alle verschieden priorisiert im Product Backlog vorhanden sind. Die wichtigsten Aufgaben werden dann für den kommenden Sprint in das Sprint Backlog verschoben. Dabei versucht sich das Team aufeinander abzustimmen, sodass alle den gleichen Fortschritt im Sprint erreichen und die implementierten Features getestet werden können. <br>
+Beim Sprint Review werden die Ergebnisse vorgestellt. Hier wird auch ein Bild davon gemacht, wie gut die implementierten Features zusammen funktionieren und ob Verbesserungsbedarf besteht. Dieses Meeting ist auch optimal dafür geeignet, weitere Vorschläge für das Product Backlog zu sammeln. Weiterhin kann hier auch gesehen werden, wie das Tempo auf das Team wirkt und ob Anpassungen am Tempo und den Prioritäten nötig sind. <br>
+Bei Bedarf kann das Team innerhalb eines Sprints Meetings z.B. zur Problembehandlung vereinbaren. In jedem Meeting können auch weitere Themen wie z.B. Projektorganisation besprochen werden.
+
+#### Werkzeuge für die Projektorganisation
+
+Zur Organisation des Projekts wird in GitHub das Feature `Projects (beta)` genutzt. Darin ist ein Scrum Board aufgebaut, welches in mehrere Spalten aufgeteilt ist. Die Spalten sind bekanntlich:
+1. Product Backlog
+2. Sprint Backlog
+3. In Progress
+4. In Review
+5. Done
+
+#### Verlauf eines Sprints
+
+Die Sprints haben eine Dauer von einer Woche. Es findet am Anfang ein Meeting für das Sprint Planning und am Ende ein Meeting für das Sprint Review statt. Bei Bedarf können zwischendurch weitere Meetings vereinbart werden. Während des Sprints werden die Aufgaben aus dem Sprint Backlog abgearbeitet.
+
 - Wie sieht hier ein Codereview aus? TODO
   - Es werden die erledigten Issues vorgestellt
   - Kurz und knapp relevantere und kompliziertere Codeteile, trivialer Code sollte nicht vorgestellt werden
+
+#### Kommunikation
+
+Hauptsächlich kommuniziert das Team über Discord. Per Chat kann man in den verschieden organisierten Kanälen Nachrichten austauschen. Für Meetings, die Online stattfinden, wird der Voice Chat von Discord genutzt. (Verlinkung von GitHub mit Discord / Änderungen auf GitHub werden in Discord übermittelt (Webhook) TODO). Kommentare zu den Issues und Commits werden direkt in GitHub erstellt.
+
 - Wie und womit wird die Teamkommunikation durchgeführt?
   - Hauptsächlich über Discord
     - Per Chat in verschieden organisierten Kanälen
     - Per Voice Chat in Meetings
     - Verlinkung von GitHub mit Discord / Änderungen auf GitHub werden in Discord übermittelt (Webhook) TODO
   - Kommentare zu Issues und Commits in GitHub
+
+#### Dokumentation
+
 - Dokumentation: TODO
   - Entwicklerdokumentation?
     - Swagger TODO
@@ -84,7 +94,7 @@
   - Statische Codeanalyse
   - ...
 
-  ISO25010
+    - ISO25010
 - Aufteilung in Repositories gemäß Systemarchitektur? Monorepo?
 Repos nach Microservice Architektur
 - Versionskontrolle? Git-Workflow?
@@ -99,7 +109,7 @@ Jeder Microservice wird in einem eigenen Docker Container ausgeführt. Zur Conta
   - Programmiersprachen.
   - Frameworks.
   - Logging.
-  Globales Error Logging durch RabbitMQ.
+    - Globales Error Logging durch RabbitMQ.
 - Technologieauswahl: Messaging zum Beispiel mit [RabbitMQ](https://www.rabbitmq.com/) und [AsyncAPI](https://www.asyncapi.com/)
 
 ## Rollen und Verantwortlichkeiten
