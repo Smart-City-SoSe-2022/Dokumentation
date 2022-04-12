@@ -8,8 +8,7 @@ Smart City ist ein Portal, das mehrere Smarte Services der Stadt verknüpft, sod
 
 ## Github Repository
 
-* Link zum Github Repository mit Source Code, Dokumentation, Kanban-Board
-  - [Smart City](https://github.com/Smart-City-SoSe-2022)
+Das Projekt wird durch die Organisation Smart City SoSe 2022 durchgeführt und enthält ein Project Board und alle Repositories zum Projekt, welches unter folgendem Link verfügbar ist: [Smart-City-SoSe-2022](https://github.com/Smart-City-SoSe-2022).
 
 ## Ziele
 
@@ -70,16 +69,15 @@ Jedoch gibt es auch eine Risiken und Nebeneffekte, die zu erwarten sind. Dazu ge
 
 | Funktion / Relevanz | Name | Kontakt / Verfügbarkeit | Wissen  | Interessen / Ziele  | 
 |---|---|---|---|---|
-| Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen | Daniel Fast | daniel.fast@fh-bielefeld.de, GitHub: @mrdanf, 9 - 18 Uhr, Löhne | Produktvision, Stakeholderinput | Qualitatives Produkt erstellen |
+| Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen | Daniel Fast | daniel.fast@fh-bielefeld.de, GitHub: @mrdanf, 9 - 18 Uhr, Verfügbarkeit 70%, Löhne | Produktvision, Stakeholderinput | Qualitatives Produkt erstellen |
+| Administrator, Serverbetreiber | Frau Munter | Tel.: 057187321, munter@mindenservers.de, 8 - 16 Uhr, Verfügbarkeit 80%, Minden | Erfahrung mit Smarten Diensten, Erfahrung in Wartungsarbeiten | Stabiler und Sicherer Service mit wenig Ausfallzeiten |
+| Bürger | Herr Meister | Tel.: 057145632, 14 - 19 Uhr, Mitarbeit zu 10 % möglich, Minden | Zu stellende Anträge oder Aufgaben in der Kommune | Nutzung eines Portals für alle Dienste |
 | Leiter Stadtverwaltung | Herr Mustermann | Tel.: 057101234, stadtmuster@minden.de, 8 - 16 Uhr, Mitarbeit zu 20 % möglich, Minden | Kennt Prozesse der Stadtverwaltung | Vereinfachung und Automatisierung von Anträgen |
-| Administrator, Serverbetreiber | Frau Munter | Tel.: 057187321, munter@mindenservers.de | Erfahrung mit Smarten Diensten, Expertise in Wartungsarbeiten | Stabiler und Sicherer Service mit wenig Ausfallzeiten |
-| Leiter der Bibliothek TODO | - | - | - | - |
-| Leiter des Verkehrsamts TODO | - | - | - | - |
-| - | - | - | - | - |
-|**Vorlage:**|---|---|---|---|
-| Leiter der Bibliothek, Fachlicher Entscheider  |  Herr Bauer | Tel. 409000, Von 9-19 Uhr telefonisch erreichbar, Mitarbeit zu 30% möglich, Nürnberg  | Kennt das Altsystem aus der Anwendersicht, soll mit dem System arbeiten  | Vereinfachung der Ausleihprozesse  |  
-| Administrator, Informationslieferant bzgl. Wartungsanforderungen  | Herr Heiner  | Heiner@gmx.net, Per E-Mail, immer erreichbar, Verfügbarkeit 50%, Nürnberg  | Vertraut mit vergleichbarer Verwaltungssoftware   |  Stabiles System, geringer Wartungsaufwand | 
-| Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen   | Paul Ottmer  |  po@ottmer.de, Per E-Mail und tel. tagsüber, Verfügbarkeit 100%, Nürnberg  | Koordinator für die Inputs der Stakeholder  | ROI des Systems sicherstellen  | 
+| Leiterin der Bibliothek | Frau Mustang | Tel.: 0571983462, mustang@bibminden.de, 8 - 16 Uhr, Verfügbarkeit 100%, Minden | Kennt Prozesse beim Buchverleih | Vereinfachung von Buchverleih, Buchverfügbarkeitsstatus |
+| Restaurantbesitzer | Herr Lecker | Tel.: 057168463, lecker@snackerei.de, 12 - 22 Uhr, Verfügbarkeit 40%, Minden  | Kennt Prozesse im Restaurant, Auslastung, Management | Digitale Reservierung von Plätzen |
+| Leiter der Stadtbank | Herr Schmidt | Tel.: 0571111222, schmidt@bank.de, 07 - 13 Uhr, Verfügbarkeit 40%, Minden | Kennt Prozesse in einer Bank, Geldabwicklung | Mehr Kunden durch einfache Bedienbarkeit und Vernetzung |
+| Leiterin der Stadtwerke | Frau Müller | Tel.: 05719747685, info@mindenwerk.de, 09 - 17 Uhr, Verfügbarkeit 100%, Minden | Kennt Prozesse in den Stadtwerken | Onlineangebot von Verträgen, einfacher Verbrauch ablesen |
+| Autohändler | Herr Stahl | Tel.: 0571647382, info@yourkfz.de, 9 - 21 Uhr, Verfügbarkeit 100%, Minden | Erfahrung im Autoverkauf und Verleih | Erhöhung des Umsatz durch Onlineangebot, Einfacher Angebot an den Kunden bringen |
 
 ## Systemübersicht
 
@@ -95,6 +93,10 @@ Die Datenformate der Kommunikation sind zwischen Client und Server JSON. Innerha
 ## Funktionale Anforderungen TODO
 
 - "Globale" Funktionalitäten, die alle Microservices überspannen
+
+![Use Cases](media/Portal_Use_Cases.drawio.svg)
+
+Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch keinen Account besitzt, möchte er einen erstellen, indem er sich registriert. Der Nutzer möchte immer seine Daten ändern können wie z.B. Wohnort. Auf der Startseite des Portals möchte der Nutzer auch relevante Informationen in Kurzfassung einsehen können, wie z.B. sein Kontostand (TODO). Damit der Nutzer auch die anderen Services nutzen kann, möchte er von der Startseite zu den anderen Services wechseln können.
 
 ## Abläufe
 
@@ -167,7 +169,3 @@ Prüfbarkeit |X|-|-|-|
 * z.B. Datenschutzgrundverordnung
 
 [^1]: ISO 2510: https://iso25000.com/index.php/en/iso-25000-standards/iso-25010
-
-
-
-
