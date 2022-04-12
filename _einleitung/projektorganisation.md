@@ -80,18 +80,26 @@
   - Erweiterbarkeit
   - Dokumentation
   - automatische und manuelle Tests
+    - Code wird auf Kompilierbarkeit geprüft und dann gepushed.
   - Statische Codeanalyse
   - ...
+
+  ISO25010
 - Aufteilung in Repositories gemäß Systemarchitektur? Monorepo?
+Repos nach Microservice Architektur
 - Versionskontrolle? Git-Workflow?
+Jeder hat seinen eigenen Workflow dank eigener Repos. Versionskontrolle mit Git und GitHub.
 - Wie werden Änderungen intgriert und ausgeliefert? CI/CD? 
+Bei jedem Merge in ein Master Branch wird die neueste Version automatisch mit GitHub Actions deployed.
 - Wie wird die Infrastruktur spezifiziert? Containerisierung?
+Jeder Microservice wird in einem eigenen Docker Container ausgeführt. Zur Containerverwaltung wird Kubernetes verwendet.
 - Implementierung
   - Entwicklungsumgebung.
   - Betriebssysteme.
   - Programmiersprachen.
   - Frameworks.
   - Logging.
+  Globales Error Logging durch RabbitMQ.
 - Technologieauswahl: Messaging zum Beispiel mit [RabbitMQ](https://www.rabbitmq.com/) und [AsyncAPI](https://www.asyncapi.com/)
 
 ## Rollen und Verantwortlichkeiten
