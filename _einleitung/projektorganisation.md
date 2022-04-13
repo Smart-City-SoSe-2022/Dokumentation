@@ -30,45 +30,29 @@ Zur Organisation des Projekts wird in GitHub das Feature `Projects (beta)` genut
 
 Die Sprints haben eine Dauer von einer Woche. Es findet am Anfang ein Meeting für das Sprint Planning und am Ende ein Meeting für das Sprint Review statt. Bei Bedarf können zwischendurch weitere Meetings vereinbart werden. Während des Sprints werden die Aufgaben aus dem Sprint Backlog abgearbeitet.
 
-- Wie sieht hier ein Codereview aus? TODO
-  - Es werden die erledigten Issues vorgestellt
-  - Kurz und knapp relevantere und kompliziertere Codeteile, trivialer Code sollte nicht vorgestellt werden
+#### Codereview
+
+Bevor neuer Code in den main Branch gemerged werden kann, muss erst mal ein Pull Request gestellt werden. Der DevOps Engineer überprüft dann den neuen Code. Wenn der Code kompiliert und gut ist, wird er in den main Branch gemerged.
 
 #### Kommunikation
 
-Hauptsächlich kommuniziert das Team über Discord. Per Chat kann man in den verschieden organisierten Kanälen Nachrichten austauschen. Für Meetings, die Online stattfinden, wird der Voice Chat von Discord genutzt. (Verlinkung von GitHub mit Discord / Änderungen auf GitHub werden in Discord übermittelt (Webhook) TODO). Kommentare zu den Issues und Commits werden direkt in GitHub erstellt.
-
-- Wie und womit wird die Teamkommunikation durchgeführt?
-  - Hauptsächlich über Discord
-    - Per Chat in verschieden organisierten Kanälen
-    - Per Voice Chat in Meetings
-    - Verlinkung von GitHub mit Discord / Änderungen auf GitHub werden in Discord übermittelt (Webhook) TODO
-  - Kommentare zu Issues und Commits in GitHub
+Hauptsächlich kommuniziert das Team über Discord. Per Chat kann man in den verschieden organisierten Kanälen Nachrichten austauschen. Für Meetings, die Online stattfinden, wird der Voice Chat von Discord genutzt. Zusätzlich wird in Discord ein Channel mit Hilfe von Webhooks eingerichtet, damit aktuelle Aktivitäten in den Repositories im Channel sichtbar sind. Kommentare zu den Issues und Commits werden direkt in GitHub erstellt.
 
 #### Dokumentation
 
-- Dokumentation: TODO
-  - Entwicklerdokumentation?
-    - Swagger TODO
-  - Kundendokumentation?
-  - Meeting-Protokoll-Dokumentation?
-    - Nach jedem Meeting wird ein ausführliches Protokoll angefertigt mit besprochenen Themen und Beschlüssen
-- Was ist der Produktlieferzeitplan? (x-Mal-wöchentliche Auslieferungen / Continuous I/D/D) TODO
-  - 1 mal wöchentlich am Ende der Woche TODO
-- Wie wird der Projektfortschritt gemessen und was passiert, wenn zeitlich verschoben werden muss?
-  - Der Projektfortschritt wird mittels des Kanban Boards gemessen
-  - Bei zeitlicher Verschiebung muss für den nächsten Sprint neu priorisiert werden
-- Wer setzt Erwartungen und Ziele fest und wie werden diese dokumentiert?
-  - Jedes Teammitglied stellt seine Idee und Umfang für ein Microservice vor
-  - Der Product Owner begutachtet die Idee und den Umfang und achtet zusammen mit DevOps Engineer auf Einhaltung des Ziels und Qualität
-- Was passiert, wenn jemand Verbesserungsmöglichkeiten identifiziert?
-  - Generell werden Verbesserungsmöglichkeiten immer angehört und bei genug zeitlichem Puffer in einem Issue festgehalten
-  - Verbesserung am Code einfach an jeweiliger Stelle im Code bei GitHub kommentieren
-  - Können frei im dafür vorgesehenen Discord Text-Channel geäußert werden
-- Einschränkungen, Betriebsbedingungen, Faktoren und Risiken, die die Entwicklung beeinflussen können.
-  - Unerfahrenheit in der Entwicklung von Microservices
-  - Architekturmuster bisher unbekannt
-  - Neue Technologien
+Für jedes Repository muss eigene Dokumentation erstellt werden, da jedes Repository ein eigenes Front- und Backend und eine Datenbank enthält. Jedes Teammitglied beschreibt die API seines Backends mit Swagger.io. <br>
+Für die Meetings werden auch ausführliche Protokolle angefertigt, die auch die Beschlüsse festhalten.
+
+#### Produktlieferzeitplan
+
+Das Produkt wird immer ausgeliefert (deployed), sobald eine neue Version im main Branch verfügbar ist. Somit kann es zu mehreren Produktauslieferungen pro Woche kommen.
+
+#### Organisation des Projektfortschritts
+
+Um den Fortschritt des Projekts im Auge zu behalten und auf Änderungen oder Rückschläge besser reagieren zu können, wird der Projektfortschritt mittels eines Scrum Boards gemessen. Falls Aufgaben nicht rechtzeitig erledigt werden konnten und das Projekt somit teilweise in Verzug gerät, müssen die Aufgaben für den nächsten Sprint neu priorisiert werden. <br>
+Die Priorisierung der Aufgaben übernimmt der Product Owner. Auch die Erwartungen und Ziele legt der Product Owner fest, wobei jedes Teammitglied auch seine eigenen Wünsche und Bemerkungen mit dazu beitragen kann. Der Product Owner und der DevOps Engineer achten zusammen auf die Einhaltung des Ziels und der Softwarequalität. <br>
+Wenn jemandem Verbesserungsmöglichkeiten einfallen sollte, sollten diese einfach über Discord oder im Meeting geäußert werden. Wenn genug zeitlicher Puffer vorhanden ist, können diese Vorschläge umgesetzt werden. Bei Verbesserungen am Code sollten diese direkt in GitHub vorgeschlagen werden. <br>
+Generell ist auch davon auszugehen, dass nicht alles perfekt nach Plan läuft, da das Team bisher noch keine Erfahrung in der Entwicklung einer Webanwendung mit Hilfe von Microservices hat. Neue Technologien und das bisher unbekannte Architekturmuster birgen Risiken, die die Entwicklung beeinflussen können. Neue Priorisierung und Verbesserungsvorschläge sind durchaus erwartet.
 
 ### Team
 
@@ -96,19 +80,19 @@ Zur Versionskontrolle wird Git genutzt. Das gesamte Projekt und die Repositories
 
 | Person | Rolle | Verantwortlichkeit |
 |----------|-----------|-----------|
-| Daniel Fast | Scrum Master | Leitung, Kanban-Board, Protokollierung, Prozessqualität |
+| Daniel Fast | Scrum Master | Leitung, Scrum-Board, Protokollierung, Prozessqualität |
 | Daniel Fast | Product Owner | Produktvision, Integrations-Microservice, Softwareproduktqualität |
 | Luca Humke | DevOps Engineer | Github-Repos, Docker, CI/CD, Dokumentation, Support, Infrastrukturqualität | 
 | Luca Humke  | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
-| Marcel Sander | Software Engineer | Microservice [Parkplatz](parkplatz/index) |
-| Manuel Wiebe | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Oskar Schaubert | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Abdurakhman Vaysert | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Vadim Balysev | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Endrina Meta | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Rene Braun | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Daniel Fast | Software Engineer | Microservice Portal / Authentifizierung |
+| Marcel Sander | Software Engineer | Microservice [Banksystem](banksystem/index) |
+| Manuel Wiebe | Software Engineer | Microservice [Stadtwerke](stadtwerke/index) |
+| Oskar Schaubert | Software Engineer | Microservice [Bibliothek](bibliothek/index) |
+| Abdurakhman Vaysert | Software Engineer | Microservice [Fahrzeugvermietung](fahrzeugvermietung/index) |
+| Vadim Balysev | Software Engineer | Microservice [Stadtverwaltung](stadtverwaltung/index) |
+| Rene Braun | Software Engineer | Microservice [Local-Finder](local-finder/index) |
 
-Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein.
+Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein. TODO
 
 ## Grober Meilensteinplan
 

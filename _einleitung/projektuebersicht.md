@@ -62,7 +62,7 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 ## Kommunikationsprotokolle und Datenformate
 
 Zur Kommunikation werden die Protokolle TCP/IP und RabbitMQ verwendet. TCP/IP kommt zum Einsatz, wenn die Clients sich mit dem Server verbinden und so Daten austauschen. RabbitMQ wird intern im Server zur Anwendung kommen, wenn die Microservices miteinander kommunizieren. <br>
-Die Datenformate der Kommunikation sind zwischen Client und Server JSON. Innerhalb des Servers werden Daten durch Plain Text mit RabbitMQ ausgetauscht. TODO
+Die Datenformate der Kommunikation zwischen Client und Server bestehen aus HTML, CSS, JavaScript und JSON. Innerhalb des Servers werden Daten durch Plain Text mit RabbitMQ ausgetauscht.
 
 ## Funktionale Anforderungen
 
@@ -94,19 +94,11 @@ Die Webanwendung wird den Standards der W3C nach entwickelt, um den Nutzern eine
 Da die Webanwendung sensible Daten verarbeitet und mit vielen gleichzeitigen Nutzer zu rechnen ist, wird ein Server mit mäßig hohen Anforderungen und sehr guter Stabilität und Sicherheit benötigt. Aufgrund der Stabilität und Sicherheit, wird Linux das Betriebssystem des Servers sein. Die weiteren Anforderungen sind die Rechenleistung und Speicherkapazität. <br>
 Es wird eine mittelmäßige Rechenleistung für die gleichzeitigen Nutzer benötigt. Die auszuführende Logik ist größtenteils sehr simpel. Die Speicherkapazität sollte etwas erhöht sein, da es viele verschiedene Microservices gibt, die jeweils ihre eigenen Daten und die Daten der Nutzer einspeichern müssen.
 
-#### Externe Vorgaben TODO
-
-
-
 ### Betriebsbedingungen
 
-- Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
-
-Das Portal muss auf allen aktuellen Browsern aufrufbar sein. Es ist für die Anwendung auf Rechnern optimiert. Die Anwendung kann auch mit Smartphones genutzt werden, obwohl es nicht für Smartphones optimiert ist. Zur Nutzung eines aktuellen Browsers sollte mindestens Windows 7 installiert sein. Auf dem Smartphone sollte mindestens Android 8 installiert sein. Programmiersprache TODO
+Das Portal muss auf allen aktuellen Browsern aufrufbar sein. Es ist für die Anwendung auf Rechnern optimiert. Die Anwendung kann auch mit Smartphones genutzt werden, obwohl es nicht für Smartphones optimiert ist. Zur Nutzung eines aktuellen Browsers sollte mindestens Windows 7 installiert sein. Auf dem Smartphone sollte mindestens Android 8 installiert sein. Die Wahl der Programmiersprache ist frei für jeden Microservice.
 
 ### Qualitätsmerkmale
-
-- Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
 ---|---|---|---|---
