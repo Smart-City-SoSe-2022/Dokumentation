@@ -7,3 +7,4 @@
 
 * [**Parkplatz**](parkplatz/index)
 * [**Bank**](bank/index)
+* [**Stadtwerke**](stadtwerke/index)
