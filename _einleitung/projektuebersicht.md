@@ -79,8 +79,6 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 
 ### Rahmenbedingungen
 
-- Normen, Standards, Protokolle, Hardware, externe Vorgaben
-
 #### Normen
 
 Damit das Portal konkurrenzfähig und qualitativ ist, setzen wir die Webanwendung nach dem ISO 25010[^1] Standard durch.
