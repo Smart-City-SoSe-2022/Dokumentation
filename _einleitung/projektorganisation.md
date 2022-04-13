@@ -72,38 +72,18 @@ Hauptsächlich kommuniziert das Team über Discord. Per Chat kann man in den ver
 
 ### Team
 
-- Werte und menschliche Umgangsformen
-  - Jedes Teammitglied darf seine Meinung zu verschiedenen Features oder Code frei äußern bzw. sollte es produktive Kritik sein
-  - Die Teammitglieder sprechen sich per Du an
-  - Alle Teammitglieder sind gleichgestellt, es herrscht eine flache Hierarchie
-- Wie werden Meinungsverschiedenheiten gelöst?
-  - Wenn keine Mitte unter den Teammitgliedern gefunden werden kann, versucht der Scrum Master eine bestmögliche alternative Lösung für das Problem zu finden
-- Wer legt Prioritäten und Zeitpläne fest?
-  - Der Product Owner
-- Was passiert, wenn ein Teammitglied ein Ziel nicht einhält bzw. die Erwartungen nicht erfüllt?
-  - Es wird zusammen mit dem Teammitglied eine Lösung gefunden, sei es Hilfestellung oder Entlastung im nächsten Sprint
-  - Notfalls muss neu priorisiert werden
+Üblich dem Scrum Modell nach, herrscht im Team eine flache Hierarchie. Alle Teammitglieder sind gleichgestellt. Jedes Teammitglied darf seine Meinung zu verschiedenen Features oder geschriebenen Code frei äußern. Zu beachten ist nur, dass es produktive Kritik sein sollte und niemanden angreifen sollte. <br>
+Bei Meinungsverschiedenheiten versuchen die Teammitglieder erst selbst sich abzusprechen. Falls keine Lösung gefunden wird, versucht der Scrum Master eine bestmögliche Entscheidung zur Lösung des Problems zu treffen. <br>
+Die Zeitpläne und Prioritäten werden vom Product Owner festgelegt. Falls ein Teammitglied sein Ziel voraussichtlich nicht einhalten kann bzw. nicht im zufriedenstellenden Maße, sollte das Teammitglied früh genug von seinem Problem oder Verzug berichten. Somit kann frühstmöglich Hilfestellung geleistet werden. Sollte am Ende des Sprints immer noch das Ziel nicht erreicht werden, muss die Planung für den nächsten Sprint angepasst werden und eventuell auch neu priorisiert werden.
 
-### Technik TODO
+### Technik
 
-- Interne Anforderungen an Softwarequalitätsmerkmale 
-  - Erweiterbarkeit
-  - Dokumentation
-  - automatische und manuelle Tests
-    - Code wird auf Kompilierbarkeit geprüft und dann gepushed.
-  - Statische Codeanalyse
-  - ...
+Das Team bemüht sich, die Software nach dem ISO25010 Standard umzusetzen. Das bedeutet, das Team versucht die Softwarequalität hoch zu halten, in dem es leserlichen und erweiterbaren Code schreibt. Das ist notwendig, da die Microservices wöchentlich ein Inkrement erreichen und Features über die Zeit hinzugefügt werden. Zusätzlich sollte der Code mit Kommentaren und Dokumentation wie z.B. JavaDoc versehen werden. Bei selbsterklärenden Methoden und Code kann davon abgesehen werden. <br>
+Es wird auf dem develop Branch des Repositorys gearbeitet. Commits werden dann mit einem Pull Request auf den main Branch gepusht. Automatische Tests prüfen den Code auf Kompilierbarkeit, bevor der Code in den main Branch gemerged wird. Bei jedem Merge in ein main Branch wird die neueste Version automatisch mit GitHub Actions deployed. <br>
+Jeder Microservice erhält sein eigenes Repository, welches je von einem Teammitglied bearbeitet wird. Dadurch kann die Microservice Architektur optimal umgesetzt werden. Zusätzlich wird jedes Microservice in einem eigenen Docker Container ausgeführt. Zur Containerverwaltung wird Kubernetes verwendet. <br>
+Zur Versionskontrolle wird Git genutzt. Das gesamte Projekt und die Repositories werden in GitHub verwaltet. Einen festen Workflow gibt es, dank eigener Repositories, nicht. Jedes Teammitglied kann seinen eigenen Workflow in seinem Repository einbringen.
 
-    - ISO25010
-- Aufteilung in Repositories gemäß Systemarchitektur? Monorepo?
-Repos nach Microservice Architektur
-- Versionskontrolle? Git-Workflow?
-Jeder hat seinen eigenen Workflow dank eigener Repos. Versionskontrolle mit Git und GitHub.
-- Wie werden Änderungen intgriert und ausgeliefert? CI/CD? 
-Bei jedem Merge in ein Master Branch wird die neueste Version automatisch mit GitHub Actions deployed.
-- Wie wird die Infrastruktur spezifiziert? Containerisierung?
-Jeder Microservice wird in einem eigenen Docker Container ausgeführt. Zur Containerverwaltung wird Kubernetes verwendet.
-- Implementierung
+- Implementierung TODO
   - Entwicklungsumgebung.
   - Betriebssysteme.
   - Programmiersprachen.
