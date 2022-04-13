@@ -12,33 +12,13 @@ Das Projekt wird durch die Organisation Smart City SoSe 2022 durchgeführt und e
 
 ## Ziele
 
-- Anwendungsbereiche, Motivation, Umfang, Alleinstellungsmerkmale, Marktanforderungen
-  - Moderne Webseite für eine Kommune
-  - Fortschreitende Digitalisierung in allen Bereichen des Lebens, so auch eine Smart City zur Verknüpfung verschiedener Dienste der Stadt und Beschleunigung und Automatisierung von Prozessen
-  - Portal der Stadt, Microservices mit verschiedenen Diensten
-  - Single Account für alle Services, Services synchronisieren sich automatisch
-  - Sicherheit, Zuverlässigkeit, Performanz
-
 Smart City soll der Zeit entsprechend eine moderne Webseite für eine Kommune sein, so wie es von vielen anderen Internetdienstanbietern bekannt ist. Die fortschreitende Digitalisierung in allen Bereichen des Lebens führt dazu, dass auch eine Digitalisierung der Services einer Kommune und deren Vernetzung möglich sind. Ein starker Fokus liegt dabei auf der Beschleunigung und Automatisierung von Prozessen innerhalb einer Kommune, die bekanntlich wegen überforderten Bearbeitern oft im Verzug sind. Aber auch die verschiedenen Dienste und Aktivitäten, die in einer Stadt angeboten werden, können sinnvoll verknüpft werden, um ein besseres und einfacheres Erlebnis zu bieten. <br>
 Smart City umfasst das Portal, in dem sich die Nutzer anmelden und registrieren können, und die jeweiligen Microservices, die verschiedene Mehrwerte bieten. Ein besonderes Alleinstellungsmerkmal ist der Single Account für alle Services. Man benötigt nicht mehr einen Account für jeden einzelnen Service. Weiterhin synchronisieren die Services untereinander ihre Daten. <br>
-Da es sich um sensible Daten handelt und viele Nutzer gleichzeitig das Portal nutzen, wird es für Sicherheit, Zuverlässigkeit und Performanz optimiert.
-
-- Informationen zu Zielbenutzergruppen und deren Merkmale (Bildung, Erfahrung, Sachkenntnis)
-  - Zielgruppe sind Bewohner der Stadt
-  - Hauptsächlich Personen ab 18 Jahren, die den Dienst verschiedener Services benötigen
-  - Es sind keinerlei Kenntnisse nötig, um das Portal zu verwenden
-
-Die Zielgruppe sind die Bewohner der Stadt. Diese sind hauptsächlich Personen ab 18 Jahren, die den Dienst verschiedener Services benötigen. Damit das Portal einfach nutzbar ist, ist es so gestaltet, dass keine Vorkenntnisse nötig sind.
-
-- Abgrenzung (Was ist das Softwaresystem _nicht_) TODO
-  - Es ersetzt nicht die einzelnen Ämter
-  - Bei spezifischen Problemen muss weiterhin persönlich das Problem mit dem jeweiligen Amt gelöst werden
-
+Da es sich um sensible Daten handelt und viele Nutzer gleichzeitig das Portal nutzen, wird es für Sicherheit, Zuverlässigkeit und Performanz optimiert. <br>
+Die Zielgruppe sind die Bewohner der Stadt. Diese sind hauptsächlich Personen ab 18 Jahren, die den Dienst verschiedener Services benötigen. Damit das Portal einfach nutzbar ist, ist es so gestaltet, dass keine Vorkenntnisse nötig sind. <br>
 Das Portal ersetzt jedoch nicht die einzelnen Ämter. Es wird weiterhin spezielle Probleme geben, die nicht über ein Portal lösbar sind und die persönliche Hilfe eines Bearbeiters in einem Amt bedarf.
 
 ## Risiken
-
-* SWOT-Analyse TODO
 
 **Smart City SWOT-Analyse**
 
@@ -47,25 +27,19 @@ Das Portal ersetzt jedoch nicht die einzelnen Ämter. Es wird weiterhin speziell
 | **eigene Stärke** | **Chance:** Es werden alltäglich Services der Stadt benötigt <br><br> **Stärke:** Portal verlinkt und synchronisiert verschiedene Services der Stadt, sodass nicht überall einzeln nachgehakt werden muss | **Risiko:** Andere Apps wollen die Verlinkung der Stadt ebenfalls anbieten <br><br> **Stärke:** Praxiserfahrung aus mehreren Projekten |
 | **eigene Schwäche** | **Chance:** Viele Dienste wollen in Zukunft digitalisiert werden <br><br> **Schwäche:** Portal beschränkt sich bisher nur auf bereits digitalisierte Dienste | **Risiko:** Kunden wollen gerne wegen der Bequemlichkeit alles digital lösen <br><br> **Schwäche:** Manche Dienste sind nicht genug digitalisiert und können nicht im Portal angeboten werden |
 
-
 Fazit:
 1. Bei der Digitalisierung anderer Dienste mitwirken
 2. Schnell neue digitalisierte Dienste in das Portal integrieren
 
-* Verfügen wir über die notwendigen Kompetenzen? (Umsetzbarkeit)
-  - Unser Team hat in der Vergangenheit schon mehrmals Webservices aufgebaut. Die Kompetenzen sind vorhanden und das Projekt sollte in größten Teilen umsetzbar sein.
+#### Umsetzbarkeit
 
 Das Team hinter Smart City hat schon mehrmals Webservices aufgebaut. Die Kompetenzen sind vorhanden und ausgebaut, sodass das Projekt in größten Teilen umsetzbar sein sollte.
 
-* Welche Risiken und negativen Nebeneffekte sind zu erwarten?
-  - Full Stack Development für jedes Teammitglied ist bisher neu
-  - Einarbeitung in Front- oder Backend ist zu erwarten
-  - Nicht optimaler oder qualitativer Code wegen teilweise neue Technologie wie schon erwähnt, Front- oder Backend
-  - Leistungsdruck
+#### Weitere Risiken
 
 Jedoch gibt es auch eine Risiken und Nebeneffekte, die zu erwarten sind. Dazu gehört, dass das Full Stack Development bisher noch nicht von jedem Teammitglied praktiziert wurde, da meistens die Arbeit in Frontend und Backend aufgeteilt wurde. Somit ist eine Einarbeitungszeit in Front- oder Backend erwartet. Das bedeutet gleichzeitig auch, dass das Risiko für den Sourcecode besteht, nicht qualitativ zu werden, da gleichzeitig zur Umsetzung des Front- oder Backend der Umgang mit dieser Technologie auch noch erlernt werden muss. Das alles führt dann wegen der Deadline des Projektes noch zu zusätzlichem Druck.
 
-## Stakeholder TODO
+## Stakeholder
 
 | Funktion / Relevanz | Name | Kontakt / Verfügbarkeit | Wissen  | Interessen / Ziele  | 
 |---|---|---|---|---|
@@ -79,7 +53,7 @@ Jedoch gibt es auch eine Risiken und Nebeneffekte, die zu erwarten sind. Dazu ge
 | Leiterin der Stadtwerke | Frau Müller | Tel.: 05719747685, info@mindenwerk.de, 09 - 17 Uhr, Verfügbarkeit 100%, Minden | Kennt Prozesse in den Stadtwerken | Onlineangebot von Verträgen, einfacher Verbrauch ablesen |
 | Autohändler | Herr Stahl | Tel.: 0571647382, info@yourkfz.de, 9 - 21 Uhr, Verfügbarkeit 100%, Minden | Erfahrung im Autoverkauf und Verleih | Erhöhung des Umsatz durch Onlineangebot, Einfacher Angebot an den Kunden bringen |
 
-## Systemübersicht
+## Systemübersicht TODO
 
 Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
 in Form eines Systemarchitekturdiagramms.
@@ -90,9 +64,7 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 Zur Kommunikation werden die Protokolle TCP/IP und RabbitMQ verwendet. TCP/IP kommt zum Einsatz, wenn die Clients sich mit dem Server verbinden und so Daten austauschen. RabbitMQ wird intern im Server zur Anwendung kommen, wenn die Microservices miteinander kommunizieren. <br>
 Die Datenformate der Kommunikation sind zwischen Client und Server JSON. Innerhalb des Servers werden Daten durch Plain Text mit RabbitMQ ausgetauscht. TODO
 
-## Funktionale Anforderungen TODO
-
-- "Globale" Funktionalitäten, die alle Microservices überspannen
+## Funktionale Anforderungen
 
 ![Use Cases](media/Portal_Use_Cases.drawio.svg)
 
@@ -103,7 +75,7 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 - Abläufe der Kommunikation von Microservices
   in Sequenz- oder Aktivitätsdiagramm darstellen
 
-## Nicht-funktionale Anforderungen TODO
+## Nicht-funktionale Anforderungen
 
 ### Rahmenbedingungen
 
