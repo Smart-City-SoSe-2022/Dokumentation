@@ -70,8 +70,7 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 
 ## Abläufe
 
-- Abläufe der Kommunikation von Microservices
-  in Sequenz- oder Aktivitätsdiagramm darstellen
+![Aktivitätsdiagramm](media/Aktivit%C3%A4tsdiagramm.jpeg)
 
 ## Nicht-funktionale Anforderungen
 
