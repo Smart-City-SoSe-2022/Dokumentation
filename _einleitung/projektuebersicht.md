@@ -53,11 +53,9 @@ Jedoch gibt es auch eine Risiken und Nebeneffekte, die zu erwarten sind. Dazu ge
 | Leiterin der Stadtwerke | Frau Müller | Tel.: 05719747685, info@mindenwerk.de, 09 - 17 Uhr, Verfügbarkeit 100%, Minden | Kennt Prozesse in den Stadtwerken | Onlineangebot von Verträgen, einfacher Verbrauch ablesen |
 | Autohändler | Herr Stahl | Tel.: 0571647382, info@yourkfz.de, 9 - 21 Uhr, Verfügbarkeit 100%, Minden | Erfahrung im Autoverkauf und Verleih | Erhöhung des Umsatz durch Onlineangebot, Einfacher Angebot an den Kunden bringen |
 
-## Systemübersicht TODO
+## Systemübersicht
 
-Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
-in Form eines Systemarchitekturdiagramms.
-Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe dar. Abläufe werden im Kapitel "Abläufe" dargestellt. Im Kapitel "Systemübersicht" soll genau ein Diagramm dargstellt werden. Das "Box-and-Arrow"-Diagramm soll als Systemarchitekturdiagramm eine abstrakte Übersicht über das Softwaresystem geben. Dazu stellt es die Rechnerknoten und deren Kommunikationsbeziehungen (Protokoll (z.B. HTTP), Datenformat (z.B. JSON)) dar. Also Rechtecke und gerichtete Pfeile. Ähnlich einem UML-Deployment-Diagramm, aber noch abstrakter, denn es zeigt nicht die Verteilung der Softwarebausteine auf die Rechnerknoten. So erlangt der Leser einen schnellen und guten Überblick über das Softwaresystem. 
+![Systemarchitekturdiagramm](media/Systemarchitekturdiagramm.jpeg)
 
 ## Kommunikationsprotokolle und Datenformate
 
