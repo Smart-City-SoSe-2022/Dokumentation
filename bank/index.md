@@ -5,18 +5,20 @@
 
 ## Überblick
 
-- Die Bank der Stadt … ist für jegliche Geldanlagen zuständig. Hier wird das Geld zwischen Kunden und der Bank oder auch zwischen Kunden und Kunden bewegt.Kunden können hier Auch einen Kredit aufnehmen der nach Ihrer Persöhnlichen Bewertung unterschiedlich Groß ausfallen kann. 
+- Die Bank der Stadt … ist für jegliche Geldanlagen zuständig. Hier wird das Geld zwischen Kunden und der Bank oder auch zwischen Kunden und Kunden bewegt.Kunden können hier Auch einen Kredit aufnehmen der nach Ihrer Persöhnlichen Bewertung unterschiedlich Groß ausfallen kann.Kunden können auch online für das Objekt ihrer begierde bezahlen. 
 - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+* Welche Akteure Haben wir ?
+* -Der Kunde ist ein Nutzer der Seite welcher auf der Seite sein Wertanlagen verwalten möchte.
+* -Der Mitarbeiter wiederum Unterstützt den Kunden und genehmigt Kredite. 
+
+
+![Use case bild](https://user-images.githubusercontent.com/85035651/163670969-405655d4-05e7-4e99-9aa7-9215399a9f5a.png)
+
+
 
 ## Anforderungen im Detail
 
@@ -25,23 +27,33 @@
 - Strukturierung der User Stories in funktionale Gruppen
 - Sicherheit: Misuse-Stories formulieren
 
-**Schablone für User Stories**
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Wer | Was | Warum | Wann akzeptiert |
+| Kunde | Möchte ich mich anmelden können | meine Daten geschützt sind  | Anmeldung des Kunden  |
+| Kunde | Meinen Konto stand sehen | ich weiß wieviel Geld ich besitze  | Kunde sieht seinen Kontostand |
+| Kunde | Geld überweisen | ich objekte online Bezahlen kann  | Geld wird überwiesen  |
+| Kunde | einen Kredit aufnehemen | ich mehr Geld auf meinem Konte besitze | Kreditanfrage wird erstellt |
+| Mitarbeiter | Kreditanfragen sehen | ich diese annehmen oder ablehnen kann   | Kreditanfrage wird genehmigt oder abgelehnt  |
+| Mitarbeiter | Kundendaten einsehen können | ich geld auszahlen zu kann  | Mitarbeiter sieht Kunden Daten |
 
-**Beispiel 1**
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
-| Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
+| Wer | Was | Warum | Wann akzeptiert |
+| Kunde | Möchte ich mich anmelden können | meine Daten geschützt sind  | Anmeldung des Kunden  |
+| Kunde | Meinen Konto stand sehen | ich weiß wieviel Geld ich besitze  | Kunde sieht seinen Kontostand |
+| Kunde | Geld überweisen | ich objekte online Bezahlen kann  | Geld wird überwiesen  |
+| Kunde | einen Kredit aufnehemen | ich mehr Geld auf meinem Konte besitze | Kreditanfrage wird erstellt |
 
-**Beispiel**
 
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
+| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
+| Wer | Was | Warum | Wann akzeptiert |
+| Mitarbeiter | Kreditanfragen sehen | ich diese annehmen oder ablehnen kann   | Kreditanfrage wird genehmigt oder abgelehnt  |
+| Mitarbeiter | Kundendaten einsehen können | ich geld auszahlen zu kann  | Mitarbeiter sieht Kunden Daten |
+
 
 ## Graphische Benutzerschnittstelle
 
@@ -56,7 +68,10 @@
 
 - Begriffe im Glossar darstellen
 - Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+
+
+![ER MODELL](https://user-images.githubusercontent.com/85035651/163670979-a801632b-f69b-43be-8d7c-15812aa51151.png)
+
 
 ## Abläufe
 
@@ -82,7 +97,7 @@
 
 ### URL
 
-http://smart.city/microservices/customer
+http://smart.city/microservices/bank/{KundenID}
 
 ### Commands
 
@@ -189,5 +204,11 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
+  -React
+  -Javascript
+  -CSS
 * Backend
+  -Visual Studio
 * Datenbank
+  -Datagrip
+  -MySQL
