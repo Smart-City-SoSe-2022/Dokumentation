@@ -8,3 +8,4 @@
 * [**Parkplatz**](parkplatz/index)
 * [**Bank**](bank/index)
 * [**Stadtwerke**](stadtwerke/index)
+* [**Autoverleih**](fahrzeugvermietung/index)
