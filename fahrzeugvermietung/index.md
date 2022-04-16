@@ -15,11 +15,12 @@
 
 * Akteure:
   - Mieter: Der Mieter kann sich alle Fahrzeuge anschauen und auswählen, welches Fahrzeug er mieten möchte.
-  - Vermieter: Der Vermieter ist dafür zuständig die Fahrzeuge in einer Anzeige auszustellen und diese an Mieter zu vermieten.
+  - Vermieter: Der Vermieter ist dafür zuständig die Fahrzeuge auf der Homepage auszustellen.
 * Use-Case Diagramme:
 <br>
   ![Vermietung Use-Case Diagramm](media/Vermietung.png)
   ![Ausstellung Use-Case Diagramm](media/Ausstellung.png)
+  ![Vermietete Fahrzeuge Use-Case Diagramm](media/Vermietete.png)
 * Strukturierung der Diagramme in funktionale Gruppen
 * Akteure sowie andere Begriffe der implementierten Fachdomäne definieren
 * Begriffe konsistent in der Spezifikation verwenden  
@@ -42,7 +43,6 @@
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Fahrzeug ausstellen |Vermieter| ein Fahrzeug als Mietobjekt zur Ausstellung stellen| für das Auto gewirbt wird | Das Auto zur Verfügung steht und das Auto angezeigt wird | Muss |
-| Fahrzeug vermieten  |Vermieter| ein Fahrzeug vermieten| unsere Firma Umsatz macht| das Auto zur Verfügung steht, der Mieter die Bezahlung erfolgreich abgeschlossen hat und das Fahrzeug aus den Auswahlmöglichkeiten herausgenommen oder die Menge angepasst wird| Muss |
 | vermietete Fahrzeuge betrachten |Vermieter| eine Übersicht von den vermieteten Fahrzeugen haben | ich weiß, welche Fahrzeuge vermietet sind und wer diese gemietet hat| alle vermieteten Fahrzeuge und deren Mieter angezeigt werden| Muss |
 
 ## Graphische Benutzerschnittstelle
@@ -106,35 +106,40 @@
 
 ### URL
 
-http://smart.city/microservices/customer
+http://smart.city/microservices/autoverleih
 
 ### Commands
 
 **Synchronous**
 
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
+|| **Name** | **Parameter** | **Resultat** |
+|:-| :------ | :----- | :------ |
+| POST | createCustomer() | int mieterID , String lastname, String firstname, String address, int tel, int birthdate | int result |
+|DELETE| deleteOrder() | int mieterID, fahrzeugID | int result |
+|POST| createCar()| int fahrzeugID, int vermieterID, String type, String carModell, String carColor, int carDistance, int carMaxSpeed, int carMileage, int priceDay, int priceWeek, int priceMonth| int result|
+|POST| sendPaymentData()| int mieterID, int priceToPay, int fahrzeugvermietungID| int result|
+
 
 **Asynchronous**
 
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+|| **Name** | **Parameter** | **Resultat** |
+|:-| :------ | :----- | :------ |
+|POST| createRentContract() | int mieterID, fahrzeugID | int result |
+|PUT| changeRentContract() | int mieterID, fahrzeugID | int result |
+|PUT| changeCarRentable() | int fahrzeugID, int mieterID| int result|
+|GET| getBillPaid()| int mieterID, int fahrzeugvermietungID| int result|
 
 ### Events
 
 **Customer event channel**
-
+TODO
 | **Name** | **Payload** | 
 | :------ | :----- | 
 | Customer Authorized | int id |
 | Customer Deleted | int id |
 
 **Contract event channel**
-
+TODO
 | **Name** | **Payload** | 
 | :------ | :----- | 
 | Contract Received | int id |
@@ -142,10 +147,10 @@ http://smart.city/microservices/customer
 
 ### Queries
 
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
+|| **Name** | **Parameter** | **Resultat** |
+|:-| :------ | :----- | :------ |
+|GET| getContractsMyRentCars() | int mieterID | Contract [] listMyRentCars |
+|GET| getContractsAllRentCars() | - | Contract [] listAllRentCars |
 
 ### Dependencies
 
@@ -153,15 +158,7 @@ http://smart.city/microservices/customer
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
+| Authorization Service | authenticateUser(), sendPaymentData(), getBillPaid() |
 
 
 ## Technische Umsetzung
