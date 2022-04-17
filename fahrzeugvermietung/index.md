@@ -135,7 +135,6 @@ http://smart.city/microservices/autoverleih/vehicle/id
 
 ### Fehlerbehandlung 
 
-#### Mögliche Fehler:
 - VermieterID wird bei der Bank von Marcel nicht erkannt / es existieren keine Daten unter dieser ID
   - Die übergebene Daten von Smart City unverändert speichern, damit solche Fehler nicht passieren
 - Die Kommunikation zwischen Microservices (z.B. das Übersenden vom Mieter zur Bankseite zum Bezahlen der Rechnung) funktioniert nicht 
