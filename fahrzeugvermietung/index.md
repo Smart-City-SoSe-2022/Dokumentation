@@ -42,7 +42,7 @@
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Fahrzeug ausstellen |Vermieter| ein Fahrzeug als Mietobjekt zur Ausstellung stellen| für das Auto gewirbt wird | Das Auto zur Verfügung steht und das Auto angezeigt wird | Muss |
+| Fahrzeug ausstellen |Vermieter| ein Fahrzeug als Mietobjekt zur Ausstellung stellen| für das Fahrzeug gewirbt wird | Das Fahrzeug zur Verfügung steht und das Fahrzeug angezeigt wird | Muss |
 | vermietete Fahrzeuge betrachten |Vermieter| eine Übersicht von den vermieteten Fahrzeugen haben | ich weiß, welche Fahrzeuge vermietet sind und wer diese gemietet hat| alle vermieteten Fahrzeuge und deren Mieter angezeigt werden| Muss |
 
 ## Graphische Benutzerschnittstelle
@@ -116,7 +116,7 @@ http://smart.city/microservices/autoverleih
 |:-| :------ | :----- | :------ |
 | POST | createCustomer() | int mieterID , String lastname, String firstname, String address, int tel, int birthdate | int result |
 |DELETE| deleteOrder() | int mieterID, fahrzeugID | int result |
-|POST| createCar()| int fahrzeugID, int vermieterID, String type, String carModell, String carColor, int carDistance, int carMaxSpeed, int carMileage, int priceDay, int priceWeek, int priceMonth| int result|
+|POST| createVehicles()| int fahrzeugID, int vermieterID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| int result|
 |POST| sendPaymentData()| int mieterID, int priceToPay, int fahrzeugvermietungID| int result|
 
 
@@ -126,7 +126,7 @@ http://smart.city/microservices/autoverleih
 |:-| :------ | :----- | :------ |
 |POST| createRentContract() | int mieterID, fahrzeugID | int result |
 |PUT| changeRentContract() | int mieterID, fahrzeugID | int result |
-|PUT| changeCarRentable() | int fahrzeugID, int mieterID| int result|
+|PUT| changeVehicleRentable() | int fahrzeugID, int mieterID| int result|
 |GET| getBillPaid()| int mieterID, int fahrzeugvermietungID| int result|
 
 ### Events
@@ -149,8 +149,9 @@ TODO
 
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
-|GET| getContractsMyRentCars() | int mieterID | Contract [] listMyRentCars |
-|GET| getContractsAllRentCars() | - | Contract [] listAllRentCars |
+|GET| getContractsMyRentVehicles() | int mieterID | Contract [] listMyRentVehicles |
+|GET| getContractsAllRentVehicles() | - | Contract [] listAllRentVehicles |
+|GET| getContractsAllAvailableVehicles() | - | Contract [] listAllAvailableVehicles |
 
 ### Dependencies
 
@@ -190,7 +191,12 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 ### Fehlerbehandlung 
 
-* Mögliche Fehler / Exceptions auflisten
+#### Mögliche Fehler:
+- VermieterID wird bei der Bank von Marcel nicht erkannt / es existieren keine Daten unter dieser ID
+- Das Übersenden vom Mieter zur Bankseite zum Bezahlen der Rechnung funktioniert nicht
+- Datenbankserver ist nicht erreichbar, somit ist die komplette Webseite nutzlos
+- Kommunikation zwischen Banksystem und Fahrzeugvermietung funktioniert nicht
+- Übergebene Daten sind vom falschen Typ (z.B. gewollt float, aber man bekommt einen int wert)
 * Fehlercodes / IDs sind hilfreich
 * Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
 
@@ -206,8 +212,6 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
 
 ### Verwendete Technologien
-
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Vue.js
 * SpringBoot
