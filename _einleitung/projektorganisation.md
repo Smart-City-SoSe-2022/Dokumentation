@@ -122,12 +122,12 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 | Luca Humke | DevOps Engineer | Github-Repos, Docker, CI/CD, Dokumentation, Support, Infrastrukturqualität | 
 | Luca Humke  | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
 | Daniel Fast | Software Engineer | Microservice Portal / Authentifizierung |
-| Marcel Sander | Software Engineer | Microservice [Banksystem](banksystem/index) |
+| Marcel Sander | Software Engineer | Microservice [Banksystem](bank/index) |
 | Manuel Wiebe | Software Engineer | Microservice [Stadtwerke](stadtwerke/index) |
 | Oskar Schaubert | Software Engineer | Microservice [Bibliothek](bibliothek/index) |
 | Abdurakhman Vaysert | Software Engineer | Microservice [Fahrzeugvermietung](fahrzeugvermietung/index) |
 | Vadim Balysev | Software Engineer | Microservice [Stadtverwaltung](stadtverwaltung/index) |
-| Rene Braun | Software Engineer | Microservice [Local-Finder](local-finder/index) |
+| Rene Braun | Software Engineer | Microservice [Local-Finder](localfinder/index) |
 
 ## Grober Meilensteinplan
 
