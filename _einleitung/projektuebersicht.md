@@ -66,7 +66,7 @@ Die Datenformate der Kommunikation zwischen Client und Server bestehen aus HTML,
 
 ![Use Cases](media/Portal_Use_Cases.drawio.svg)
 
-Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch keinen Account besitzt, möchte er einen erstellen, indem er sich registriert. Der Nutzer möchte immer seine Daten ändern können wie z.B. Wohnort. Auf der Startseite des Portals möchte der Nutzer auch relevante Informationen in Kurzfassung einsehen können, wie z.B. sein Kontostand (TODO). Damit der Nutzer auch die anderen Services nutzen kann, möchte er von der Startseite zu den anderen Services wechseln können.
+Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch keinen Account besitzt, möchte er einen erstellen, indem er sich registriert. Der Nutzer möchte immer seine Daten ändern können wie z.B. Wohnort. Damit der Nutzer auch die anderen Services nutzen kann, möchte er von der Startseite zu den anderen Services wechseln können.
 
 ## Abläufe
 
