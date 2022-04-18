@@ -9,3 +9,5 @@
 * [**Bank**](bank/index)
 * [**Stadtwerke**](stadtwerke/index)
 * [**Fahrzeugvermietung**](fahrzeugvermietung/index)
+* [**Local Finder**](localfinder/index)
+

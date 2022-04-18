@@ -157,15 +157,6 @@ http://smart.city/microservice/localfinder/reservations
 * Postman wird zum Testen der REST API verwendet
 * Das Frontend testet erste Zugriffe mit db.json
 
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
-
 ### Verwendete Technologien
 
 * Vue.js 
