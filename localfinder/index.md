@@ -13,6 +13,7 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 ## Funktionale Anforderungen
 
 * Use-Case Diagramme
+
 ![](media/sp_usecase.jpg)
 
 ## Anforderungen im Detail
@@ -50,8 +51,10 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 ![](media/sp_aktivi-overview.jpg)
+
 - Aktivitätsdiagramme für relevante Use Cases
 ![](media/sp_aktivi-suche.jpg)
+
 - Abläufe der Kommunikation von Rechnerknoten
 ![](media/sp_aktivi-sequenz.jpg)
 
@@ -62,18 +65,17 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 ### URL
 
-http://smart.city/microservice/localfinder/
-http://smart.city/microservice/localfinder/favorites
-http://smart.city/microservice/localfinder/local/id
-http://smart.city/microservice/localfinder/search?destination=""&startingLocation=""&area=
-http://smart.city/microservice/localfinder/reservations
+* http://smart.city/microservice/localfinder/
+
+* http://smart.city/microservice/localfinder/favorites
+
+* http://smart.city/microservice/localfinder/local/id
+
+* http://smart.city/microservice/localfinder/search?destination=""&startingLocation=""&area=
+
+* http://smart.city/microservice/localfinder/reservations
 
 ### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------- | :------------ | :----------- |
 
 **Asynchronous**
 
@@ -88,20 +90,23 @@ http://smart.city/microservice/localfinder/reservations
 ### Events
 
 **User event channel**
-| **Name** | **Payload** | 
-| :------- | :---------- | 
+
+| **Name** | **Payload** |
+| :------- | :---------- |
 | Toggle Favourite | int userId, int localId |
 
 **Local event channel**
-| **Name** | **Payload** | 
-| :------- | :---------- | 
+
+| **Name** | **Payload** |
+| :------- | :---------- |
 | Accept Reservation  | int reservationId |
 | Decline Reservation | int reservationId |
 
 
 **Admin event channel**
-| **Name** | **Payload** | 
-| :------- | :---------- | 
+
+| **Name** | **Payload** |
+| :------- | :---------- |
 | Authorize Location | int localId |
 
 
@@ -117,13 +122,13 @@ http://smart.city/microservice/localfinder/reservations
 #### RPC
 
 | **Service** | **Funktion** |
-| :---------- | :----------- | 
+| :---------- | :----------- |
 | Fetch Account from Portal | fetchAccount() |
 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
-| :------ | :----- | 
+| :------ | :----- |
 | Cinema channel | CancelFilmCreatedEvent |
 | Customer reply channel | CreateCustomerEvent |
 
@@ -156,15 +161,6 @@ http://smart.city/microservice/localfinder/reservations
 
 * Postman wird zum Testen der REST API verwendet
 * Das Frontend testet erste Zugriffe mit db.json
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
 
 ### Verwendete Technologien
 

@@ -62,19 +62,56 @@ Die Zeitpläne und Prioritäten werden vom Product Owner festgelegt. Falls ein T
 
 ### Technik
 
+#### Interne Anforderungen an Softwarequalitätsmerkmale
+
 Das Team bemüht sich, die Software nach dem ISO25010 Standard umzusetzen. Das bedeutet, das Team versucht die Softwarequalität hoch zu halten, in dem es leserlichen und erweiterbaren Code schreibt. Das ist notwendig, da die Microservices wöchentlich ein Inkrement erreichen und Features über die Zeit hinzugefügt werden. Zusätzlich sollte der Code mit Kommentaren und Dokumentation wie z.B. JavaDoc versehen werden. Bei selbsterklärenden Methoden und Code kann davon abgesehen werden. <br>
 Es wird auf dem develop Branch des Repositorys gearbeitet. Commits werden dann mit einem Pull Request auf den main Branch gepusht. Automatische Tests prüfen den Code auf Kompilierbarkeit, bevor der Code in den main Branch gemerged wird. Bei jedem Merge in ein main Branch wird die neueste Version automatisch mit GitHub Actions deployed. <br>
-Jeder Microservice erhält sein eigenes Repository, welches je von einem Teammitglied bearbeitet wird. Dadurch kann die Microservice Architektur optimal umgesetzt werden. Zusätzlich wird jedes Microservice in einem eigenen Docker Container ausgeführt. Zur Containerverwaltung wird Kubernetes verwendet. <br>
-Zur Versionskontrolle wird Git genutzt. Das gesamte Projekt und die Repositories werden in GitHub verwaltet. Einen festen Workflow gibt es, dank eigener Repositories, nicht. Jedes Teammitglied kann seinen eigenen Workflow in seinem Repository einbringen.
 
-- Implementierung TODO
-  - Entwicklungsumgebung.
-  - Betriebssysteme.
-  - Programmiersprachen.
-  - Frameworks.
-  - Logging.
-    - Globales Error Logging durch RabbitMQ.
-- Technologieauswahl: Messaging zum Beispiel mit [RabbitMQ](https://www.rabbitmq.com/) und [AsyncAPI](https://www.asyncapi.com/)
+#### Aufteilung der Repositories
+
+Jeder Microservice erhält sein eigenes Repository, welches je von einem Teammitglied bearbeitet wird. Dadurch kann die Microservice Architektur optimal umgesetzt werden. Zusätzlich wird jedes Microservice in einem eigenen Docker Container ausgeführt. Zur Containerverwaltung wird Kubernetes verwendet. <br>
+
+#### Versionskontrolle
+
+Zur Versionskontrolle wird Git genutzt. Das gesamte Projekt und die Repositories werden in GitHub verwaltet. Einen festen Workflow gibt es, dank eigener Repositories, nicht. Jedes Teammitglied kann seinen eigenen Workflow in seinem Repository einbringen. <br>
+
+#### Entwicklungsumgebung und Betriebssysteme
+
+Für die genutzten Technologien in der Implementierung hat jedes Teammitglied die freie Wahl. Es wird als Entwicklungsumgebung größtenteils IntelliJ IDEA genutzt, dazu kommt auch IntelliJ Datagrip und Rider und auch Visual Studio Code. Die Entwicklung findet auf Windows 10 oder 11 statt, der Code wird jedoch auf Linux Servern laufen.
+
+#### Programmiersprachen
+
+Es werden mehrere Programmiersprachen für die Entwicklung verwendet. Jedes Teammitglied kann für sein Repository die verwendete Sprache bestimmen. Es kommen folgende Programmiersprachen zum Einsatz:
+- HTML
+- CSS
+- JavaScript
+- Java
+- Python
+- C#
+
+#### Datenbank
+Es wird in jedem Repository MySQL als Datenbank verwendet.
+
+#### Frameworks
+
+Wie auch bei den Programmiersprachen, kommen für jedes Repository eigene Frameworks zum Einsatz. Diese sind folgende: <br>
+Frontend:
+- React
+- Svelte
+- Vue
+
+Backend:
+- SpringBoot
+- Express
+- Django
+
+#### Kommunikationstechnologie zwischen Microservices
+
+Die Kommunikation zwischen den Microservices wird mit [RabbitMQ](https://www.rabbitmq.com/) durchgeführt. Durch RabbitMQ synchronisieren die Server ihre Daten und bleiben immer konsistent.
+
+#### Logging
+
+Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging durchgeführt.
 
 ## Rollen und Verantwortlichkeiten
 
@@ -85,21 +122,17 @@ Zur Versionskontrolle wird Git genutzt. Das gesamte Projekt und die Repositories
 | Luca Humke | DevOps Engineer | Github-Repos, Docker, CI/CD, Dokumentation, Support, Infrastrukturqualität | 
 | Luca Humke  | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
 | Daniel Fast | Software Engineer | Microservice Portal / Authentifizierung |
-| Marcel Sander | Software Engineer | Microservice [Banksystem](banksystem/index) |
+| Marcel Sander | Software Engineer | Microservice [Banksystem](bank/index) |
 | Manuel Wiebe | Software Engineer | Microservice [Stadtwerke](stadtwerke/index) |
 | Oskar Schaubert | Software Engineer | Microservice [Bibliothek](bibliothek/index) |
 | Abdurakhman Vaysert | Software Engineer | Microservice [Fahrzeugvermietung](fahrzeugvermietung/index) |
 | Vadim Balysev | Software Engineer | Microservice [Stadtverwaltung](stadtverwaltung/index) |
-| Rene Braun | Software Engineer | Microservice [Local-Finder](local-finder/index) |
-
-Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein. TODO
+| Rene Braun | Software Engineer | Microservice [Local-Finder](localfinder/index) |
 
 ## Grober Meilensteinplan
 
-Zusätzlich zum Kanban-Board hier Meilensteine beschreiben.
-
 **Feststehende Termine:**
 
-* **Abgabe Spezifikation:** KW 16 (18.4.-20.4.)
+* **Abgabe Spezifikation:** KW 16 18.04.2022
 * **Erster Prototyp (MVP):** KW 20 (16.5.-18.5.) / KW 21 (23.5.-25.5.)
 * **Softwareprojektabgabe:** Ende Juni 2022 / Anfang Juli 2022
