@@ -5,7 +5,7 @@
 
 ## Überblick
 
-- Smart Rent ist für das Vermieten von elektro Fahrezeugen zuständig. Unter elektro Fahrzeuge fallen elektro Fahrräder, elektro Roller und elektro Autos.
+- Smart Rent ist für das Vermieten von elektro Fahrzeugen zuständig. Unter elektro Fahrzeuge fallen elektro Fahrräder, elektro Roller und elektro Autos.
 Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
 
 
