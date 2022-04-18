@@ -17,7 +17,7 @@
 
 
 * Akteure:
-  - Verwaltung: Kümmert sich um die eingehenden Anträge 
+  - Verwaltung: Kümmert sich um die eingehenden Anträge und das Verwalten des Services
   - Nutzer: kann Anträge stellen für Vereine, Schulen und Einsehen der Übersichten 
 
 * Use-Case Diagramme
@@ -40,28 +40,32 @@
 
 **Nutzer User-Stories für Schulverwaltung**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
 | :Schulen ansehen | :Nutzer | :einsehen welche Schulen es in der Umgebung gibt | :ich informationen erhalte für welche ich mich entscheide | :Eine Liste von möglichen Schulen |
 | :Sprechstunden ansehen | :Nutzer | :einsehen, wann man ein zoom meeting vereinbaren kann | :ich informationen erhalte für welche ich mich entscheide | :Uhrzeiten mit den möglichen Sprechstunden |
 | :Eintragen in Wartelisten | :Nutzer | :mich in eine Warteliste eintragen | :ich mein Kind auf die gewünschte Schule schicken kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Schulverwaltung**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
 | :Schulen ansehen | :Verwaltung | :die Schulen in der Umgebung bearbeiten | :ich die Liste immer aktuell halte | :bearbeitung der Liste zum ergänzen oder löschen von Schulen |
 | :Sprechstunden ansehen | :Verwaltung | :die Zeiten für die Sprechstunden anpassen | :ich die Zeiten immer aktuell halte | :anpassen der Zeiten |
 | :Eintragen in Wartelisten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | :Annahmen von Kindern bei genügend Platz  |
 
 **Nutzer User-Stories für Vereine**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
 | :Vereine ansehen | :Nutzer | :einsehen welche Vereine es in der Umgebung schon gibt | :ich eine Übersicht habe  | :Eine Liste von möglichen Vereine |
 | :Voraussetzungen ansehen | :Nutzer | :einsehen, welche Kriterien erfüllt sein müssen | :ich einen Verein Gründen darf | :Alle nötigen Informationen zum Gründen von einem Verein |
 | :Eintragen in Wartelisten | :Nutzer | :meinen Verein in eine Warteliste eintragen | :ich meinen Verein registrieren kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Vereine**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
 | :Vereine ansehen | :Verwaltung | :die Vereine in der Umgebung bearbeiten | :ich die Liste immer aktuell halte  | :bearbeitung der Liste zum ergänze oder löschen von Vereinen |
 | :Voraussetzungen bearbeiten | :Verwaltung | :die Voraussetungen anpassen können | :man immer die aktuellen Voraussetzungen hat | :Alle nötigen Informationen zum Gründen von einem Verein |
 | :Warteliste ansehen und bearbeiten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich diese bearbeiten kann | :Eine liste der eingetragenen Vereine zum an oder ablehnen |
@@ -113,14 +117,10 @@
 
 ### Aktivitätsdiagramm für Eintrag in die Warteliste für Schulen
  ![](media/Aktivitätsdiagramm-warteliste.png)
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
+### Anträge in der Warteliste bearbeiten
+ ![](media/anträge.png)
+### Swimlanes der Kommunikation zwischen Nutzer, Datenbank und Verwaltung
+ ![](media/swimlane.jpg)
 
 
 ## Schnittstellen
@@ -131,7 +131,7 @@
 - Aufteilen in Commands, Events, Queries
 * Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
 
-**Beispiel:**
+**Beispiele:**
 
 ### URL
 
@@ -151,7 +151,7 @@ http://smart.city/microservices/stadtverwaltung/anträge
 **Synchronous**
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| :---------- | :------ | :----- | :------ |
 |POST| createschool() | int id | int id |
 |DELETE| deleteschool() | int id | int id |
 |POST| createverein() | int id | int id |
@@ -253,8 +253,8 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
-  -Vue.js
+  - Vue.js
 * Backend
-  -Springboot
+  - Springboot
 * Datenbank
-  -postgreSql
+  - postgreSql
