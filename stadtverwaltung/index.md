@@ -41,39 +41,39 @@
 **Nutzer User-Stories für Schulverwaltung**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| :Schulen ansehen | :Nutzer | :einsehen welche Schulen es in der Umgebung gibt | :ich informationen erhalte für welche ich mich entscheide | :Eine Liste von möglichen Schulen |
-| :Sprechstunden ansehen | :Nutzer | :einsehen, wann man ein zoom meeting vereinbaren kann | :ich informationen erhalte für welche ich mich entscheide | :Uhrzeiten mit den möglichen Sprechstunden |
-| :Eintragen in Wartelisten | :Nutzer | :mich in eine Warteliste eintragen | :ich mein Kind auf die gewünschte Schule schicken kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
+| :-------| :------ | :----- | :------ | :-------- |
+| Schulen ansehen | Nutzer | einsehen welche Schulen es in der Umgebung gibt | ich informationen erhalte für welche ich mich entscheide | Eine Liste von möglichen Schulen |
+| Sprechstunden ansehen | Nutzer | einsehen, wann man ein zoom meeting vereinbaren kann | ich informationen erhalte für welche ich mich entscheide | Uhrzeiten mit den möglichen Sprechstunden |
+| Eintragen in Wartelisten | Nutzer | mich in eine Warteliste eintragen | ich mein Kind auf die gewünschte Schule schicken kann | alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Schulverwaltung**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| :Schulen ansehen | :Verwaltung | :die Schulen in der Umgebung bearbeiten | :ich die Liste immer aktuell halte | :bearbeitung der Liste zum ergänzen oder löschen von Schulen |
-| :Sprechstunden ansehen | :Verwaltung | :die Zeiten für die Sprechstunden anpassen | :ich die Zeiten immer aktuell halte | :anpassen der Zeiten |
-| :Eintragen in Wartelisten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | :Annahmen von Kindern bei genügend Platz  |
+| :------ | :------ | :----- | :------ | :-------- |
+| Schulen ansehen | Verwaltung | die Schulen in der Umgebung bearbeiten | ich die Liste immer aktuell halte | bearbeitung der Liste zum ergänzen oder löschen von Schulen |
+| Sprechstunden ansehen | Verwaltung | die Zeiten für die Sprechstunden anpassen | ich die Zeiten immer aktuell halte | anpassen der Zeiten |
+| Eintragen in Wartelisten | Verwaltung | einsehen welche Anträge angekommen sind | ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | Annahmen von Kindern bei genügend Platz  |
 
 **Nutzer User-Stories für Vereine**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| :Vereine ansehen | :Nutzer | :einsehen welche Vereine es in der Umgebung schon gibt | :ich eine Übersicht habe  | :Eine Liste von möglichen Vereine |
-| :Voraussetzungen ansehen | :Nutzer | :einsehen, welche Kriterien erfüllt sein müssen | :ich einen Verein Gründen darf | :Alle nötigen Informationen zum Gründen von einem Verein |
-| :Eintragen in Wartelisten | :Nutzer | :meinen Verein in eine Warteliste eintragen | :ich meinen Verein registrieren kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
+| :------ | :------ | :----- | :------ | :-------- |
+| Vereine ansehen | Nutzer | einsehen welche Vereine es in der Umgebung schon gibt | ich eine Übersicht habe  | Eine Liste von möglichen Vereine |
+| Voraussetzungen ansehen | Nutzer | einsehen, welche Kriterien erfüllt sein müssen | ich einen Verein Gründen darf | alle nötigen Informationen zum Gründen von einem Verein |
+| Eintragen in Wartelisten | Nutzer | meinen Verein in eine Warteliste eintragen | ich meinen Verein registrieren kann | alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Vereine**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| :Vereine ansehen | :Verwaltung | :die Vereine in der Umgebung bearbeiten | :ich die Liste immer aktuell halte  | :bearbeitung der Liste zum ergänze oder löschen von Vereinen |
-| :Voraussetzungen bearbeiten | :Verwaltung | :die Voraussetungen anpassen können | :man immer die aktuellen Voraussetzungen hat | :Alle nötigen Informationen zum Gründen von einem Verein |
-| :Warteliste ansehen und bearbeiten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich diese bearbeiten kann | :Eine liste der eingetragenen Vereine zum an oder ablehnen |
+| :------ | :------ | :----- | :------ | :-------- |
+| Vereine ansehen | Verwaltung | die Vereine in der Umgebung bearbeiten | ich die Liste immer aktuell halte  | bearbeitung der Liste zum ergänze oder löschen von Vereinen |
+| Voraussetzungen bearbeiten | Verwaltung | die Voraussetungen anpassen können | man immer die aktuellen Voraussetzungen hat | Alle nötigen Informationen zum Gründen von einem Verein |
+| Warteliste ansehen und bearbeiten | Verwaltung | einsehen welche Anträge angekommen sind | ich diese bearbeiten kann | Eine liste der eingetragenen Vereine zum an oder ablehnen |
 
 **Fehlereingaben**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
+| :------ | :------ | :----- | :------ | :-------- |
 | Fehler bei nicht ausgefülltem Feld | Nutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich weiß warum es zum Fehler kam | Lösung wird angezeigt |
 
 
