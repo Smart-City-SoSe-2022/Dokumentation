@@ -18,10 +18,7 @@ Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
   ![Vermietung Use-Case Diagramm](media/Vermietung.png)
   ![Ausstellung Use-Case Diagramm](media/Ausstellung.png)
   ![Vermietete Fahrzeuge Use-Case Diagramm](media/Vermietete.png)
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+
 
 ## Anforderungen im Detail
 
