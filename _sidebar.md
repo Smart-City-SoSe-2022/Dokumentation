@@ -11,4 +11,5 @@
 * [**Fahrzeugvermietung**](fahrzeugvermietung/index)
 * [**Local Finder**](localfinder/index)
 * [**Stadtverwaltung**](stadtverwaltung/index)
+* [**bibliothek**](bibliothek/index)
 
