@@ -17,7 +17,7 @@
 	- Kunde
 
 * Use-Case Diagramme_
-	![Smart Lib Use Cases](media/UseCases.png)
+	![](media/UseCases.png)
 
 
 ## Anforderungen im Detail
@@ -60,36 +60,36 @@
 
 
 ### Navigationsdiagramm:
-	![Navigation](media/navigation.png)
+	![](media/navigation.png)
 
 
 ### Frontpage:
-	![Frontpage](media/frontpage.png)
+	![](media/frontpage.png)
 	User-Story: Gesamtangebot einsehen
 	
 	
 ### Medien Ansicht:
-	![Titel Ansicht](media/TitelAnsicht.png)
+	![](media/TitelAnsicht.png)
 	User-Story: Spezifische Ansicht
 
 
 ### Suche
-	![Titel Suche](media/suche.png)
+	![](media/suche.png)
 	User-Story: Suchen
 
 
 ### Buchung
-	![Titel Buchen](media/buchen.png)
+	![](media/buchen.png)
 	User-Story: Ausleihen
 
 
 ### Eintrag erstellen
-	![Titel erstellen](media/erstellen.png)
+	![](media/erstellen.png)
 	User-Story: Eintrag erstellen
 
 
 ### Editieren
-	![Titel editieren](media/editieren.png)
+	![](media/editieren.png)
 	User-Story: Eintrag bearbeiten & Eintrag löschen
 
 
@@ -97,17 +97,17 @@
 ## Datenmodell 
 
 ### Physikalisches Datenmodell
-	![Physikalisches Datenmodell](media/physikalischesDatenmodell.png)
+	![](media/physikalischesDatenmodell.png)
 
 
 ## Abläufe
 
 ### Aktivitätsdiagramm Medium ausleihen
-	![Ein Medium ausleihen](media/ausleihen.png)
+	![](media/ausleihen.png)
 	
 	
 ### Aktivitätsdiagramm Medium bearbeiten
-	![Ein Medium bearbeiten](media/bearbeiten.png)
+	![](media/bearbeiten.png)
 
 
 ## Schnittstellen
@@ -115,13 +115,13 @@
 
 ### URL
 
-http://smart.city/microservices/bibliothek
-http://smart.city/microservices/bibliothek/suche
-http://smart.city/microservices/bibliothek/suche/suchbegriff
-http://smart.city/microservices/bibliothek/mediumTitel
-http://smart.city/microservices/bibliothek/mediumTitel/buchen
-http://smart.city/microservices/bibliothek/mediumTitel/erstellen
-http://smart.city/microservices/bibliothek/mediumTitel/bearbeiten
+http://smart.city/microservices/bibliothek  
+http://smart.city/microservices/bibliothek/suche  
+http://smart.city/microservices/bibliothek/suche/suchbegriff  
+http://smart.city/microservices/bibliothek/mediumTitel  
+http://smart.city/microservices/bibliothek/mediumTitel/buchen  
+http://smart.city/microservices/bibliothek/mediumTitel/erstellen  
+http://smart.city/microservices/bibliothek/mediumTitel/bearbeiten  
 
 
 
@@ -156,10 +156,7 @@ http://smart.city/microservices/bibliothek/mediumTitel/bearbeiten
 
 ## Technische Umsetzung
 
-
 ### Verwendete Technologien
-
-- Verwendete Technologien
 
 * Frontend:
 	- Javascript - React
