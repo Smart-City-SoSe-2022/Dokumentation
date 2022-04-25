@@ -149,11 +149,11 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
-  -React
-  -Javascript
-  -CSS
+  - React
+  - Javascript
+  - CSS
 * Backend
   - .NET
 * Datenbank
-  -Datagrip
-  -MySQL
+  - Datagrip
+  - MySQL
