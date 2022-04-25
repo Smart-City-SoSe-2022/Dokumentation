@@ -123,7 +123,6 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 | Luca Humke  | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
 | Daniel Fast | Software Engineer | Microservice Portal / Authentifizierung |
 | Marcel Sander | Software Engineer | Microservice [Banksystem](bank/index) |
-| Manuel Wiebe | Software Engineer | Microservice [Stadtwerke](stadtwerke/index) |
 | Oskar Schaubert | Software Engineer | Microservice [Bibliothek](bibliothek/index) |
 | Abdurakhman Vaysert | Software Engineer | Microservice [Fahrzeugvermietung](fahrzeugvermietung/index) |
 | Vadim Balysev | Software Engineer | Microservice [Stadtverwaltung](stadtverwaltung/index) |
