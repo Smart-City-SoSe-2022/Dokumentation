@@ -12,7 +12,7 @@
 ## Funktionale Anforderungen
 
 * Welche Akteure Haben wir ?
-* -Der Kunde ist ein Nutzer der Seite welcher auf der Seite sein Wertanlagen verwalten möchte.
+* -Der Kunde ist ein Nutzer der Seite, welcher auf der Seite sein Wertanlagen verwalten möchte.
 * -Der Mitarbeiter wiederum Unterstützt den Kunden und genehmigt Kredite. 
 
 
@@ -21,12 +21,6 @@
 
 
 ## Anforderungen im Detail
-
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
-
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
@@ -101,58 +95,13 @@ http://smart.city/microservices/bank/{KundenID}
 
 ### Commands
 
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
 
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
-
-### Events
-
-**Customer event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
-
-**Contract event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
-
-### Dependencies
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
+| getCustomer() | int id | int id |
+| getCustomerbankbalance() | int id | int id |
 
 
 ## Technische Umsetzung
