@@ -16,8 +16,8 @@
 	- Bibliothekar
 	- Kunde
 
-* Use-Case Diagramme_
-	![](media/UseCases.png)
+* Use-Case Diagramme 
+![](media/UseCases.png)
 
 
 ## Anforderungen im Detail
@@ -59,55 +59,55 @@
 ## Graphische Benutzerschnittstelle
 
 
-### Navigationsdiagramm:
-	![](media/navigation.png)
+### Navigationsdiagramm: 
+![](media/navigation.png)
 
 
-### Frontpage:
-	![](media/frontpage.png)
-	User-Story: Gesamtangebot einsehen
+### Frontpage: 
+![](media/frontpage.png)
+User-Story: Gesamtangebot einsehen
 	
 	
-### Medien Ansicht:
-	![](media/TitelAnsicht.png)
-	User-Story: Spezifische Ansicht
+### Medien Ansicht: 
+![](media/TitelAnsicht.png)
+User-Story: Spezifische Ansicht
 
 
-### Suche
-	![](media/suche.png)
-	User-Story: Suchen
+### Suche: 
+![](media/suche.png)
+User-Story: Suchen
 
 
-### Buchung
-	![](media/buchen.png)
-	User-Story: Ausleihen
+### Buchung: 
+![](media/buchen.png)
+User-Story: Ausleihen
 
 
-### Eintrag erstellen
-	![](media/erstellen.png)
-	User-Story: Eintrag erstellen
+### Eintrag erstellen: 
+![](media/erstellen.png)
+User-Story: Eintrag erstellen
 
 
-### Editieren
-	![](media/editieren.png)
-	User-Story: Eintrag bearbeiten & Eintrag löschen
+### Editieren: 
+![](media/editieren.png)
+User-Story: Eintrag bearbeiten & Eintrag löschen
 
 
 
 ## Datenmodell 
 
-### Physikalisches Datenmodell
-	![](media/physikalischesDatenmodell.png)
+### Physikalisches Datenmodell 
+![](media/physikalischesDatenmodell.png)
 
 
 ## Abläufe
 
-### Aktivitätsdiagramm Medium ausleihen
-	![](media/ausleihen.png)
+### Aktivitätsdiagramm Medium ausleihen 
+![](media/ausleihen.png)
 	
 	
-### Aktivitätsdiagramm Medium bearbeiten
-	![](media/bearbeiten.png)
+### Aktivitätsdiagramm Medium bearbeiten 
+![](media/bearbeiten.png)
 
 
 ## Schnittstellen
