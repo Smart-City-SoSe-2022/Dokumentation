@@ -51,11 +51,7 @@
 
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
+![Unbenannt](https://user-images.githubusercontent.com/85035651/165083950-2240ed4d-651c-4cdb-9f6d-c683982b9115.png)
 
 
 ## Datenmodell 
