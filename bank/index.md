@@ -153,7 +153,7 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   -Javascript
   -CSS
 * Backend
-  -Visual Studio
+  - .NET
 * Datenbank
   -Datagrip
   -MySQL
