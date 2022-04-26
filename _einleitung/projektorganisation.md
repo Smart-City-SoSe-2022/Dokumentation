@@ -90,7 +90,9 @@ Es werden mehrere Programmiersprachen für die Entwicklung verwendet. Jedes Team
 - C#
 
 #### Datenbank
-Es wird in jedem Repository MySQL als Datenbank verwendet.
+Verwendete Datenbanken:
+- MySQL
+- PostgreSQL
 
 #### Frameworks
 
@@ -133,5 +135,5 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 **Feststehende Termine:**
 
 * **Abgabe Spezifikation:** KW 16 18.04.2022
-* **Erster Prototyp (MVP):** KW 20 (16.5.-18.5.) / KW 21 (23.5.-25.5.)
+* **Erster Prototyp (MVP):** KW 21 23.05.2022
 * **Softwareprojektabgabe:** Ende Juni 2022 / Anfang Juli 2022
