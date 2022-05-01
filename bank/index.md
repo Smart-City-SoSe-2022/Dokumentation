@@ -106,7 +106,12 @@ http://smart.city/microservices/bank/{KundenID}
 | :------ | :----- | :------ |
 | getCustomer() | int id | int id |
 | getCustomerbankbalance() | int id | int id |
-| 
+
+**Queries**
+| **Name** | **Parameter** | **Resultat** |
+| :------ | :----- | :------ |
+| creatworker()| int id| int workerid|
+
 
 
 ## Technische Umsetzung
