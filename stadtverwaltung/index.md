@@ -169,7 +169,7 @@ http://smart.city/microservices/stadtverwaltung/anträge
 **Customer event channel**
 
 | **Anfrageart**| **Name** | **ID** | 
-| :------ | :----- | :------ | :------ |
+| :------ | :----- | :------ | 
 | schoolkid accepted | string school | int id |
 | schoolkid rejected | string school | int id |
 | club accepted |string clubname | int id |
