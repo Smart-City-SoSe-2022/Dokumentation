@@ -152,15 +152,15 @@ http://smart.city/microservices/stadtverwaltung/anträge
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
 | :---------- | :------ | :----- | :------ |
-|POST| createschool() | int id | int id |
-|DELETE| deleteschool() | int id | int id |
-|POST| createverein() | int id | int id |
-|DELETE| deleteverein() | int id | int id |
+|POST| createschool() | String schoolname | int id |
+|DELETE| deleteschool() | String  schoolname | int id |
+|POST| createclub() | String clubname | int id |
+|DELETE| deleteclub() | String clubname | int id |
 
 **Asynchronous**
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| :------ | :----- | :------ | :------ |
 | createContract() | int id | int id |
 | changeContract() | int id | - |
 
@@ -168,10 +168,12 @@ http://smart.city/microservices/stadtverwaltung/anträge
 
 **Customer event channel**
 
-| **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | :------ |
-| Customer Authorized | int id |
-| Customer Deleted | int id |
+| **Anfrageart**| **Name** | **ID** | 
+| :------ | :----- | :------ | :------ |
+| schoolkid accepted | string school | int id |
+| schoolkid rejected | string school | int id |
+| club accepted |string clubname | int id |
+| club rejected| string clubname | int id |
 
 **Contract event channel**
 
