@@ -91,7 +91,7 @@
  ![](media/Mu-schulverwaltung.jpg)
 ### Sprechstunden
  ![](media/Mu-sprech.jpg)
-### Eintrag auf die Warteliste für Kinder
+### Eintrag auf die Warteliste für Vereine
  ![](media/Mu-eintragschule.jpg)
 ### Startseite für Vereine
  ![](media/Mu-verein.jpg)
@@ -133,7 +133,7 @@
 
 **Beispiele:**
 
-### URL
+### URL für alle Funktionen
 
 http://smart.city/microservices/stadtverwaltung
 http://smart.city/microservices/stadtverwaltung/schulverwaltung
@@ -169,21 +169,21 @@ http://smart.city/microservices/stadtverwaltung/anträge
 **Customer event channel**
 
 | **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | 
+| :------ | :----- | :------ |
 | Customer Authorized | int id |
 | Customer Deleted | int id |
 
 **Contract event channel**
 
 | **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | 
+| :------ | :----- | :----- |
 | Contract Received | int id |
 | Contract Deleted | int id |
 
 ### Queries
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| :------ | :----- | :------ | :------ |
 | getContracts() | - | Contract [] list |
 | getContract() | int id | Contract c |
 
