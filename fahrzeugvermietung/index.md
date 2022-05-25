@@ -99,7 +99,6 @@ http://smart.city/microservices/autoverleih/vehicle/id
 | POST | createCustomer() | int mieterID , String lastname, String firstname, String address, int tel, int birthdate | int result |
 |DELETE| deleteOrder() | int mieterID, fahrzeugID | int result |
 |POST| createVehicles()| int fahrzeugID, int vermieterID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| int result|
-|POST| sendPaymentData()| int mieterID, int priceToPay, int smartRentID| int result|
 
 
 **Asynchronous**
@@ -109,6 +108,7 @@ http://smart.city/microservices/autoverleih/vehicle/id
 |POST| createRentContract() | int mieterID, fahrzeugID | int result |
 |PUT| changeRentContract() | int mieterID, fahrzeugID | int result |
 |PUT| changeVehicleRentable() | int fahrzeugID, int mieterID| int result|
+|POST| sendPaymentData()| int mieterID, int priceToPay, int smartRentID| int result|
 |GET| getBillPaid()| int mieterID, int smartRentID| int result|
 
 ### Queries
