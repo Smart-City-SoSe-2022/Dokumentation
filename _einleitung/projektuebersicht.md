@@ -74,13 +74,15 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 
 ## Schnittstellen
 
-### Holen von Daten eines Accounts
+### URL
+
+#### Holen von Daten eines Accounts
 GET /portal/get
 ```
 Geht nur nach Anmeldung, Cookie wird benötigt
 ```
 
-### Erstellung eines Accounts
+#### Erstellung eines Accounts
 POST /portal/create
 ```
 {
@@ -94,7 +96,7 @@ POST /portal/create
 }
 ```
 
-### Update eines Accounts
+#### Update eines Accounts
 PUT /portal/update
 ```
 Geht nur nach Anmeldung, Cookie wird benötigt
@@ -110,12 +112,42 @@ Geht nur nach Anmeldung, Cookie wird benötigt
 }
 ```
 
-### Löschung eines Accounts
+#### Löschung eines Accounts
 DELETE /portal/delete
 ```
 Geht nur nach Anmeldung, Cookie wird benötigt
 ```
 
+### Events
+
+Die Events werden über RabbitMQ verschickt und empfangen. Folgend sind die Routing Keys und die Bodies dieser gelistet.
+
+#### portal.account.created
+```
+{
+    "id": 1
+}
+```
+
+#### portal.account.updated
+```
+{
+    "id": 1
+}
+```
+
+#### portal.account.deleted
+```
+{
+    "id": 1,
+    "forename": "Vadim",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Heidenweg 89",
+    "plz": "76421",
+    "email": "vadim@gmail.com"
+}
+```
 
 ## Nicht-funktionale Anforderungen
 
