@@ -72,6 +72,51 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 
 ![Aktivitätsdiagramm](media/Aktivit%C3%A4tsdiagramm.jpeg)
 
+## Schnittstellen
+
+### Holen von Daten eines Accounts
+GET /portal/get
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+```
+
+### Erstellung eines Accounts
+POST /portal/create
+```
+{
+    "forename": "Daniel",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Straßenweg 12",
+    "plz": "32584",
+    "email": "dancoding@gmx.net",
+    "password": "abc"
+}
+```
+
+### Update eines Accounts
+PUT /portal/update
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+
+{
+    "forename": "Vadim",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Heidenweg 89",
+    "plz": "76421",
+    "email": "vadim@gmail.com",
+    "password": "123abc"
+}
+```
+
+### Löschung eines Accounts
+DELETE /portal/delete
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+```
+
+
 ## Nicht-funktionale Anforderungen
 
 ### Rahmenbedingungen

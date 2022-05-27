@@ -135,5 +135,5 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 **Feststehende Termine:**
 
 * **Abgabe Spezifikation:** KW 16 18.04.2022
-* **Erster Prototyp (MVP):** KW 21 23.05.2022
+* **Erster Prototyp (MVP):** KW 22 30.05.2022
 * **Softwareprojektabgabe:** Ende Juni 2022 / Anfang Juli 2022
