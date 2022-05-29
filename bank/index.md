@@ -96,21 +96,15 @@ http://smart.city/microservices/bank/{KundenID}
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| Getcredit() | int credit | int credit |
-| Getsendmoney()| int money| int money|
-| creatworker()| int id| int workerid|
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| getBalance() | int id | int id |
 | getCustomer() | int id | int id |
-| getCustomerbankbalance() | int id | int id |
+| creatdebit() | int accountnumber,int Balance | int id |
+
 
 **Queries**
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| creatworker()| int id| int workerid|
+
 
 
 
