@@ -125,26 +125,82 @@
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
+#### Verein erstellen 
+POST http://localhost:8080/stadtverwaltung/createclub
+```
+{
+  "club_id": "12"
+  "club_name": "Basketballverein"
+  "founder": "Max Detroit"
+  "member": "20"
+  "task": "Basketball"
+  "finacing": "Beiträge"
+  "description": "Wir sind ein Verein für Basketball"
+}
+public boolean createclub(int clubID,
+                                  String clubName,
+                                  String founder,
+                                  int member,
+                                  String task,
+                                  String financing,
+                                  String description
+                                  ) 
+```
+
+#### Schule erstellen 
+POST http://localhost:8080/stadtverwaltung/createschool
+```
+{
+  "school_id": "14"
+  "school_name": "Grundschule von Bergen"
+  "founder": "Dakota Bergen"
+}
+public boolean createclub(int schoolID,
+                                  String clubName,
+                                  String founder,
+                                  ) 
+```
+
+#### Verein Löschen
+DELETE http://localhost:8080/stadtverwaltung/deleteclub
+```
+{
+  "club_id": "12"
+  "club_name": "Basketballverein"
+  "founder": "Max Detroit"
+  "member": "20"
+  "task": "Basketball"
+  "finacing": "Beiträge"
+  "description": "Wir sind ein Verein für Basketball"
+}
+public boolean deleteclub(int clubID) 
+```
+
+#### Schule Löschen
+DELETE http://localhost:8080/stadtverwaltung/deleteclub
+```
+{
+  "school_id": "24"
+  "school_name": "Grundschule von Bergen"
+  "founder": "Dakota Bergen"
+}
+public boolean deleteschool(int schoolID) 
+```
 
 **Beispiele:**
 
 ### URL für alle Funktionen
 
-http://smart.city/microservices/stadtverwaltung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/umgebung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/sprechstunden
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/eintragen
-http://smart.city/microservices/stadtverwaltung/vereine
-http://smart.city/microservices/stadtverwaltung/vereine/umgebung
-http://smart.city/microservices/stadtverwaltung/vereine/voraussetzungen
-http://smart.city/microservices/stadtverwaltung/vereine/eintragen
-http://smart.city/microservices/stadtverwaltung/anträge
+http://smart.city/microservices/stadtverwaltung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/umgebung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/sprechstunden <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/eintragen <br>
+http://smart.city/microservices/stadtverwaltung/vereine <br>
+http://smart.city/microservices/stadtverwaltung/vereine/umgebung <br>
+http://smart.city/microservices/stadtverwaltung/vereine/voraussetzungen <br>
+http://smart.city/microservices/stadtverwaltung/vereine/eintragen <br>
+http://smart.city/microservices/stadtverwaltung/anträge <br>
 
 ### Commands
 
