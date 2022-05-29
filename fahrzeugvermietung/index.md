@@ -340,9 +340,9 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 |GET| getContractsAllRentVehicles() | - | Contract [] listAllRentVehicles |
 |GET| getContractsAllAvailableVehicles() | - | Contract [] listAllAvailableVehicles |
 
-### Dependencies
+### Events
 
-#### RPC
+#### RabbitMQ
 
 | **Service** | **Funktion** | **Routing Key** | Query type |
 | :------ | :----- | :----- | :----- |
@@ -351,6 +351,17 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
  | Customer Created Service | createCustomer() | portal.account.created | Hören |
  | Customer Deleted Service | deleteCustomer() | portal.account.deleted | Hören |
 
+##### sendPaymentData() gesendete json Daten:
+```
+{
+  "custmer_id":"20"
+  "firstname": "Max"
+  "lastname": "Mustermann"
+  "payment_reciever": "Smart Rent"
+  "payment_bank": "DE2392032302309"
+  "payment_price": "20"
+}
+```
 
 ## Technische Umsetzung
 
