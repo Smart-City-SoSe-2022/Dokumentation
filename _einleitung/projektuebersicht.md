@@ -66,11 +66,88 @@ Die Datenformate der Kommunikation zwischen Client und Server bestehen aus HTML,
 
 ![Use Cases](media/Portal_Use_Cases.drawio.svg)
 
-Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch keinen Account besitzt, möchte er einen erstellen, indem er sich registriert. Der Nutzer möchte immer seine Daten ändern können wie z.B. Wohnort. Auf der Startseite des Portals möchte der Nutzer auch relevante Informationen in Kurzfassung einsehen können, wie z.B. sein Kontostand (TODO). Damit der Nutzer auch die anderen Services nutzen kann, möchte er von der Startseite zu den anderen Services wechseln können.
+Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch keinen Account besitzt, möchte er einen erstellen, indem er sich registriert. Der Nutzer möchte immer seine Daten ändern können wie z.B. Wohnort. Damit der Nutzer auch die anderen Services nutzen kann, möchte er von der Startseite zu den anderen Services wechseln können.
 
 ## Abläufe
 
 ![Aktivitätsdiagramm](media/Aktivit%C3%A4tsdiagramm.jpeg)
+
+## Schnittstellen
+
+### URL
+
+#### Holen von Daten eines Accounts
+GET /portal/get
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+```
+
+#### Erstellung eines Accounts
+POST /portal/create
+```
+{
+    "forename": "Daniel",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Straßenweg 12",
+    "plz": "32584",
+    "email": "dancoding@gmx.net",
+    "password": "abc"
+}
+```
+
+#### Update eines Accounts
+PUT /portal/update
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+
+{
+    "forename": "Vadim",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Heidenweg 89",
+    "plz": "76421",
+    "email": "vadim@gmail.com",
+    "password": "123abc"
+}
+```
+
+#### Löschung eines Accounts
+DELETE /portal/delete
+```
+Geht nur nach Anmeldung, Cookie wird benötigt
+```
+
+### Events
+
+Die Events werden über RabbitMQ verschickt und empfangen. Folgend sind die Routing Keys und die Bodies dieser gelistet.
+
+#### portal.account.created
+```
+{
+    "id": 1
+}
+```
+
+#### portal.account.updated
+```
+{
+    "id": 1
+}
+```
+
+#### portal.account.deleted
+```
+{
+    "id": 1,
+    "forename": "Vadim",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Heidenweg 89",
+    "plz": "76421",
+    "email": "vadim@gmail.com"
+}
+```
 
 ## Nicht-funktionale Anforderungen
 

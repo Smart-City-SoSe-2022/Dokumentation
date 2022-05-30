@@ -12,7 +12,7 @@
 ## Funktionale Anforderungen
 
 * Welche Akteure Haben wir ?
-* -Der Kunde ist ein Nutzer der Seite welcher auf der Seite sein Wertanlagen verwalten möchte.
+* -Der Kunde ist ein Nutzer der Seite, welcher auf der Seite sein Wertanlagen verwalten möchte.
 * -Der Mitarbeiter wiederum Unterstützt den Kunden und genehmigt Kredite. 
 
 
@@ -21,12 +21,6 @@
 
 
 ## Anforderungen im Detail
-
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
-
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
@@ -57,11 +51,7 @@
 
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
+![Unbenannt](https://user-images.githubusercontent.com/85035651/165083950-2240ed4d-651c-4cdb-9f6d-c683982b9115.png)
 
 
 ## Datenmodell 
@@ -101,58 +91,21 @@ http://smart.city/microservices/bank/{KundenID}
 
 ### Commands
 
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
 
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+| getBalance() | int id | int id |
+| getCustomer() | int id | int id |
+| creatdebit() | int accountnumber,int Balance | int id |
 
-### Events
 
-**Customer event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
-
-**Contract event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
+**Queries**
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
 
-### Dependencies
 
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
 
 
 ## Technische Umsetzung
@@ -204,11 +157,11 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
-  -React
-  -Javascript
-  -CSS
+  - React
+  - Javascript
+  - CSS
 * Backend
-  -Visual Studio
+  - .NET
 * Datenbank
-  -Datagrip
-  -MySQL
+  - Datagrip
+  - MySQL

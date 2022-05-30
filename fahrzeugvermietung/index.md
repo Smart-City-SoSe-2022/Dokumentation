@@ -5,7 +5,7 @@
 
 ## Überblick
 
-- Smart Rent ist für das Vermieten von elektro Fahrezeugen zuständig. Unter elektro Fahrzeuge fallen elektro Fahrräder, elektro Roller und elektro Autos.
+- Smart Rent ist für das Vermieten von elektro Fahrzeugen zuständig. Unter elektro Fahrzeuge fallen elektro Fahrräder, elektro Roller und elektro Autos.
 Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
 
 
@@ -18,10 +18,7 @@ Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
   ![Vermietung Use-Case Diagramm](media/Vermietung.png)
   ![Ausstellung Use-Case Diagramm](media/Ausstellung.png)
   ![Vermietete Fahrzeuge Use-Case Diagramm](media/Vermietete.png)
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+
 
 ## Anforderungen im Detail
 
@@ -88,10 +85,231 @@ Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
 
 ### URL
 
-http://smart.city/microservices/autoverleih
-http://smart.city/microservices/autoverleih/allrent
-http://smart.city/microservices/autoverleih/myrent
-http://smart.city/microservices/autoverleih/vehicle/id
+#### Neuen Benutzer anlegen
+POST
+```
+{
+  "firstname": "Abdurakhman"
+  "lastname": "Vaysert"
+  "salution": "Herr"
+  "birthdate": "03.11.1996"
+  "address": "Musterstraße 3"
+  "city": "Minden"
+  "zipcode": "32425"
+  "tel": "0123456789"
+}
+public boolean register(String firstname,
+                        String lastname,
+                        String salution,
+                        Date birthdate,
+                        String address,
+                        String city,
+                        int zipCode,
+                        int tel
+                        ) {return boolean;}
+```
+
+#### Accountdaten holen
+GET http://localhost:8080/fahrzeugvermietung/
+```
+public Customer getCustomer(Cookie cookie){return customer;}
+```
+
+#### Mietbare Fahrzeuge laden
+GET http://localhost:8080/fahrzeugvermietung/
+```
+public Vehicle getContractsAllAvailableVehicles(){return vehicleList;}
+
+{ "vehicles": [
+    {"vehicle_id": "1"
+    "type": "car"
+    "vehicle_modell": "BMW i3"
+    "vehicle_color": "black"
+    "vehicle_distance": "250"
+    "vehicle_max_speed": "150"
+    "vehicle_mileage": "13030"
+    "price_day": "20"
+    "price_week": "80"
+    "price_month": "300"},
+
+    {"vehicle_id": "2"
+    "type": "car"
+    "vehicle_modell": "BMW i8"
+    "vehicle_color": "black"
+    "vehicle_distance": "500"
+    "vehicle_max_speed": "250"
+    "vehicle_mileage": "10030"
+    "price_day": "40"
+    "price_week": "160"
+    "price_month": "600"}
+  ] 
+}
+```
+
+#### Fahrzeug hinzufügen
+POST http://localhost:8080/fahrzeugvermietung/neues_fahrzeug
+```
+{
+  "vehicle_id": "1"
+  "type": "car"
+  "vehicle_modell": "BMW i3"
+  "vehicle_color": "black"
+  "vehicle_distance": "250"
+  "vehicle_max_speed": "150"
+  "vehicle_mileage": "13030"
+  "price_day": "20"
+  "price_week": "80"
+  "price_month": "300"
+}
+public boolean createVehicle( int vehicleID,
+                              int lessorID,
+                              String type,
+                              String vehicleModell,
+                              String vehicleColor,
+                              int vehicleDistance,
+                              int vehicleMaxSpeed,
+                              int vehicleMileage,
+                              int priceDay,
+                              int priceWeek,
+                              int priceMonth
+                              ) {return boolean;}
+```
+
+#### Mietvertrag erstellen
+POST http://localhost:8080/fahrzeugvermietung/fahrzeug/id?={id}
+```
+{
+  "customer_id": "11"
+  "vehicle_id": "3"
+  "price_option": "10"
+}
+public boolean createRentContract(int customerID,
+                                  int vehicleID,
+                                  int priceOption
+                                  ) {return boolean;}
+
+rabbitMQ:
+  public void sendPaymentData(int customerID,
+                              int priceToPay,
+                              int smartRentID
+                              ){}
+```
+
+#### Mietvertrag bearbeiten
+POST http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/id?={id}
+```
+{
+  "customer_id": "11"
+  "vehicle_id": "3"
+  "price_option": "10"
+}
+public boolean changeRentContract(int customerID,
+                                  int vehicleID,
+                                  int priceOption
+                                  ) {return boolean;}
+
+rabbitMQ:
+  public void sendPaymentData(int customerID,
+                              int priceToPay,
+                              int smartRentID
+                              ){}
+```
+
+#### Rechnung löschen
+DELETE http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/id?={id}
+```
+{
+  "customer_id": "11"
+  "vehicle_id": "3"
+}
+public boolean deleteOrder(int customerID, int vehicleID){return boolean;}
+```
+
+#### Meine gemieteten Fahrzeuge anzeigen
+DELETE http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge
+```
+{
+  "customer_id": "11"
+}
+public Vehicle getContractsMyRentVehicles()(int customerID){return listMyRentVehicles;}
+
+{ "vehicles": [
+    {"vehicle_id": "1"
+    "type": "car"
+    "vehicle_modell": "BMW i3"
+    "vehicle_color": "black"
+    "vehicle_distance": "250"
+    "vehicle_max_speed": "150"
+    "vehicle_mileage": "13030"
+    "price_day": "20"
+    "price_week": "80"
+    "price_month": "300"
+    "return_date": "20.08.2022"},
+
+    {"vehicle_id": "2"
+    "type": "car"
+    "vehicle_modell": "BMW i8"
+    "vehicle_color": "black"
+    "vehicle_distance": "500"
+    "vehicle_max_speed": "250"
+    "vehicle_mileage": "10030"
+    "price_day": "40"
+    "price_week": "160"
+    "price_month": "600"
+    "return_date": "20.08.2022"}
+  ] 
+}
+```
+
+#### Alle vermieteten Fahrzeuge anzeigen
+DELETE http://localhost:8080/fahrzeugvermietung/vermietete_fahrzeuge
+```
+{
+  "customer_id": "11"
+}
+public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVehicles;}
+
+{ "vehicles": [
+    {"vehicle_id": "1"
+    "type": "car"
+    "vehicle_modell": "BMW i3"
+    "vehicle_color": "black"
+    "vehicle_distance": "250"
+    "vehicle_max_speed": "150"
+    "vehicle_mileage": "13030"
+    "return_date": "20.08.2022"
+    "customer":{ 
+      "firstname": "Abdurakhman"
+      "lastname": "Vaysert"
+      "salution": "Herr"
+      "birthdate": "03.11.1996"
+      "address": "Musterstraße 3"
+      "city": "Minden"
+      "zipcode": "32425"
+      "tel": "0123456789"}
+    },
+
+    {"vehicle_id": "2"
+    "type": "car"
+    "vehicle_modell": "BMW i8"
+    "vehicle_color": "black"
+    "vehicle_distance": "500"
+    "vehicle_max_speed": "250"
+    "vehicle_mileage": "10030"
+    "return_date": "20.08.2022"
+    "customer":{ 
+      "firstname": "Abdurakhman"
+      "lastname": "Vaysert"
+      "salution": "Herr"
+      "birthdate": "03.11.1996"
+      "address": "Musterstraße 3"
+      "city": "Minden"
+      "zipcode": "32425"
+      "tel": "0123456789"}
+    }
+  ] 
+}
+```
 
 ### Commands
 
@@ -99,43 +317,57 @@ http://smart.city/microservices/autoverleih/vehicle/id
 
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
-| POST | createCustomer() | int mieterID , String lastname, String firstname, String address, int tel, int birthdate | int result |
-|DELETE| deleteOrder() | int mieterID, fahrzeugID | int result |
-|POST| createVehicles()| int fahrzeugID, int vermieterID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| int result|
-|POST| sendPaymentData()| int mieterID, int priceToPay, int smartRentID| int result|
+| POST | createCustomer() | int customerID , String lastname, String firstname, String address, String salution, String city, int zipcode, int tel, Date birthdate | boolean registered |
+|DELETE| deleteOrder() | int customerID, vehicleID | boolean deleted |
+|POST| createVehicles()| int vehicleID, int lessorID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| boolean created|
 
 
 **Asynchronous**
 
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
-|POST| createRentContract() | int mieterID, fahrzeugID | int result |
-|PUT| changeRentContract() | int mieterID, fahrzeugID | int result |
-|PUT| changeVehicleRentable() | int fahrzeugID, int mieterID| int result|
-|GET| getBillPaid()| int mieterID, int smartRentID| int result|
+|POST| createRentContract() | int customerID, int vehicleID, int priceOption | boolean result |
+|PUT| changeRentContract() | int customerID, int vehicleID | boolean result |
+|| changeVehicleRentable() | int customerID, int vehicleID| |
+|rabbitMQ| sendPaymentData()| int customerID, int priceToPay, int smartRentID| boolean result|
+|rabbitMQ| getBillPaid()| int customerID, int smartRentID| boolean result|
 
 ### Queries
 
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
-|GET| getContractsMyRentVehicles() | int mieterID | Contract [] listMyRentVehicles |
+|GET| getContractsMyRentVehicles() | int customerID | Contract [] listMyRentVehicles |
 |GET| getContractsAllRentVehicles() | - | Contract [] listAllRentVehicles |
 |GET| getContractsAllAvailableVehicles() | - | Contract [] listAllAvailableVehicles |
 
-### Dependencies
+### Events
 
-#### RPC
+#### RabbitMQ
 
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser(), sendPaymentData(), getBillPaid() |
+| **Service** | **Funktion** | **Routing Key** | Query type |
+| :------ | :----- | :----- | :----- |
+| Send Payment Data | sendPaymentData() | bank.payment.received | Senden |
+| Authenticate Payment | getBillPaid() | bank.payment.status.fahrzeugvermietung |Hören |
+ | Customer Created Service | createCustomer() | portal.account.created | Hören |
+ | Customer Deleted Service | deleteCustomer() | portal.account.deleted | Hören |
 
+##### sendPaymentData() gesendete json Daten:
+```
+{
+  "custmer_id":"20"
+  "firstname": "Max"
+  "lastname": "Mustermann"
+  "payment_receiver": "Smart Rent"
+  "payment_bank": "DE2392032302309"
+  "payment_price": "20"
+}
+```
 
 ## Technische Umsetzung
 
 ### Fehlerbehandlung 
 
-- VermieterID wird bei der Bank von Marcel nicht erkannt / es existieren keine Daten unter dieser ID
+- ID des Vermieters wird bei der Bank von Marcel nicht erkannt / es existieren keine Daten unter dieser ID
   - Die übergebene Daten von Smart City unverändert speichern, damit solche Fehler nicht passieren
 - Die Kommunikation zwischen Microservices (z.B. das Übersenden vom Mieter zur Bankseite zum Bezahlen der Rechnung) funktioniert nicht 
   - richtig absprechen wie die Kommunikation funktionieren soll und gegenseitig helfen

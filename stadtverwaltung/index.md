@@ -17,7 +17,7 @@
 
 
 * Akteure:
-  - Verwaltung: Kümmert sich um die eingehenden Anträge 
+  - Verwaltung: Kümmert sich um die eingehenden Anträge und das Verwalten des Services
   - Nutzer: kann Anträge stellen für Vereine, Schulen und Einsehen der Übersichten 
 
 * Use-Case Diagramme
@@ -40,36 +40,40 @@
 
 **Nutzer User-Stories für Schulverwaltung**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :Schulen ansehen | :Nutzer | :einsehen welche Schulen es in der Umgebung gibt | :ich informationen erhalte für welche ich mich entscheide | :Eine Liste von möglichen Schulen |
-| :Sprechstunden ansehen | :Nutzer | :einsehen, wann man ein zoom meeting vereinbaren kann | :ich informationen erhalte für welche ich mich entscheide | :Uhrzeiten mit den möglichen Sprechstunden |
-| :Eintragen in Wartelisten | :Nutzer | :mich in eine Warteliste eintragen | :ich mein Kind auf die gewünschte Schule schicken kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :-------| :------ | :----- | :------ | :-------- |
+| Schulen ansehen | Nutzer | einsehen welche Schulen es in der Umgebung gibt | ich informationen erhalte für welche ich mich entscheide | Eine Liste von möglichen Schulen |
+| Sprechstunden ansehen | Nutzer | einsehen, wann man ein zoom meeting vereinbaren kann | ich informationen erhalte für welche ich mich entscheide | Uhrzeiten mit den möglichen Sprechstunden |
+| Eintragen in Wartelisten | Nutzer | mich in eine Warteliste eintragen | ich mein Kind auf die gewünschte Schule schicken kann | alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Schulverwaltung**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :Schulen ansehen | :Verwaltung | :die Schulen in der Umgebung bearbeiten | :ich die Liste immer aktuell halte | :bearbeitung der Liste zum ergänzen oder löschen von Schulen |
-| :Sprechstunden ansehen | :Verwaltung | :die Zeiten für die Sprechstunden anpassen | :ich die Zeiten immer aktuell halte | :anpassen der Zeiten |
-| :Eintragen in Wartelisten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | :Annahmen von Kindern bei genügend Platz  |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :------ | :----- | :------ | :-------- |
+| Schulen ansehen | Verwaltung | die Schulen in der Umgebung bearbeiten | ich die Liste immer aktuell halte | bearbeitung der Liste zum ergänzen oder löschen von Schulen |
+| Sprechstunden ansehen | Verwaltung | die Zeiten für die Sprechstunden anpassen | ich die Zeiten immer aktuell halte | anpassen der Zeiten |
+| Eintragen in Wartelisten | Verwaltung | einsehen welche Anträge angekommen sind | ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | Annahmen von Kindern bei genügend Platz  |
 
 **Nutzer User-Stories für Vereine**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :Vereine ansehen | :Nutzer | :einsehen welche Vereine es in der Umgebung schon gibt | :ich eine Übersicht habe  | :Eine Liste von möglichen Vereine |
-| :Voraussetzungen ansehen | :Nutzer | :einsehen, welche Kriterien erfüllt sein müssen | :ich einen Verein Gründen darf | :Alle nötigen Informationen zum Gründen von einem Verein |
-| :Eintragen in Wartelisten | :Nutzer | :meinen Verein in eine Warteliste eintragen | :ich meinen Verein registrieren kann | :alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :------ | :----- | :------ | :-------- |
+| Vereine ansehen | Nutzer | einsehen welche Vereine es in der Umgebung schon gibt | ich eine Übersicht habe  | Eine Liste von möglichen Vereine |
+| Voraussetzungen ansehen | Nutzer | einsehen, welche Kriterien erfüllt sein müssen | ich einen Verein Gründen darf | alle nötigen Informationen zum Gründen von einem Verein |
+| Eintragen in Wartelisten | Nutzer | meinen Verein in eine Warteliste eintragen | ich meinen Verein registrieren kann | alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Vereine**
 
-| **Name**|| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :Vereine ansehen | :Verwaltung | :die Vereine in der Umgebung bearbeiten | :ich die Liste immer aktuell halte  | :bearbeitung der Liste zum ergänze oder löschen von Vereinen |
-| :Voraussetzungen bearbeiten | :Verwaltung | :die Voraussetungen anpassen können | :man immer die aktuellen Voraussetzungen hat | :Alle nötigen Informationen zum Gründen von einem Verein |
-| :Warteliste ansehen und bearbeiten | :Verwaltung | :einsehen welche Anträge angekommen sind | :ich diese bearbeiten kann | :Eine liste der eingetragenen Vereine zum an oder ablehnen |
+| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :------ | :----- | :------ | :-------- |
+| Vereine ansehen | Verwaltung | die Vereine in der Umgebung bearbeiten | ich die Liste immer aktuell halte  | bearbeitung der Liste zum ergänze oder löschen von Vereinen |
+| Voraussetzungen bearbeiten | Verwaltung | die Voraussetungen anpassen können | man immer die aktuellen Voraussetzungen hat | Alle nötigen Informationen zum Gründen von einem Verein |
+| Warteliste ansehen und bearbeiten | Verwaltung | einsehen welche Anträge angekommen sind | ich diese bearbeiten kann | Eine liste der eingetragenen Vereine zum an oder ablehnen |
 
 **Fehlereingaben**
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
+| :------ | :------ | :----- | :------ | :-------- |
 | Fehler bei nicht ausgefülltem Feld | Nutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich weiß warum es zum Fehler kam | Lösung wird angezeigt |
 
 
@@ -87,7 +91,7 @@
  ![](media/Mu-schulverwaltung.jpg)
 ### Sprechstunden
  ![](media/Mu-sprech.jpg)
-### Eintrag auf die Warteliste für Kinder
+### Eintrag auf die Warteliste für Vereine
  ![](media/Mu-eintragschule.jpg)
 ### Startseite für Vereine
  ![](media/Mu-verein.jpg)
@@ -113,54 +117,106 @@
 
 ### Aktivitätsdiagramm für Eintrag in die Warteliste für Schulen
  ![](media/Aktivitätsdiagramm-warteliste.png)
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
+### Anträge in der Warteliste bearbeiten
+ ![](media/anträge.png)
+### Swimlanes der Kommunikation zwischen Nutzer, Datenbank und Verwaltung
+ ![](media/swimlane.jpg)
 
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
+#### Verein erstellen 
+POST http://localhost:8080/stadtverwaltung/createclub
+```
+{
+  "club_id": "12"
+  "club_name": "Basketballverein"
+  "founder": "Max Detroit"
+  "member": "20"
+  "task": "Basketball"
+  "finacing": "Beiträge"
+  "description": "Wir sind ein Verein für Basketball"
+}
+public boolean createclub(int clubID,
+                                  String clubName,
+                                  String founder,
+                                  int member,
+                                  String task,
+                                  String financing,
+                                  String description
+                                  ) 
+```
 
-**Beispiel:**
+#### Schule erstellen 
+POST http://localhost:8080/stadtverwaltung/createschool
+```
+{
+  "school_id": "14"
+  "school_name": "Grundschule von Bergen"
+  "founder": "Dakota Bergen"
+}
+public boolean createclub(int schoolID,
+                                  String clubName,
+                                  String founder,
+                                  ) 
+```
 
-### URL
+#### Verein Löschen
+DELETE http://localhost:8080/stadtverwaltung/deleteclub
+```
+{
+  "club_id": "12"
+  "club_name": "Basketballverein"
+  "founder": "Max Detroit"
+  "member": "20"
+  "task": "Basketball"
+  "finacing": "Beiträge"
+  "description": "Wir sind ein Verein für Basketball"
+}
+public boolean deleteclub(int clubID) 
+```
 
-http://smart.city/microservices/stadtverwaltung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/umgebung
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/sprechstunden
-http://smart.city/microservices/stadtverwaltung/schulverwaltung/eintragen
-http://smart.city/microservices/stadtverwaltung/vereine
-http://smart.city/microservices/stadtverwaltung/vereine/umgebung
-http://smart.city/microservices/stadtverwaltung/vereine/voraussetzungen
-http://smart.city/microservices/stadtverwaltung/vereine/eintragen
-http://smart.city/microservices/stadtverwaltung/anträge
+#### Schule Löschen
+DELETE http://localhost:8080/stadtverwaltung/deleteclub
+```
+{
+  "school_id": "24"
+  "school_name": "Grundschule von Bergen"
+  "founder": "Dakota Bergen"
+}
+public boolean deleteschool(int schoolID) 
+```
+
+**Beispiele:**
+
+### URL für alle Funktionen
+
+http://smart.city/microservices/stadtverwaltung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/umgebung <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/sprechstunden <br>
+http://smart.city/microservices/stadtverwaltung/schulverwaltung/eintragen <br>
+http://smart.city/microservices/stadtverwaltung/vereine <br>
+http://smart.city/microservices/stadtverwaltung/vereine/umgebung <br>
+http://smart.city/microservices/stadtverwaltung/vereine/voraussetzungen <br>
+http://smart.city/microservices/stadtverwaltung/vereine/eintragen <br>
+http://smart.city/microservices/stadtverwaltung/anträge <br>
 
 ### Commands
 
 **Synchronous**
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-|POST| createschool() | int id | int id |
-|DELETE| deleteschool() | int id | int id |
-|POST| createverein() | int id | int id |
-|DELETE| deleteverein() | int id | int id |
+| :---------- | :------ | :----- | :------ |
+|POST| createschool() | String schoolname | int id |
+|DELETE| deleteschool() | String  schoolname | int id |
+|POST| createclub() | String clubname | int id |
+|DELETE| deleteclub() | String clubname | int id |
 
 **Asynchronous**
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| :------ | :----- | :------ | :------ |
 | createContract() | int id | int id |
 | changeContract() | int id | - |
 
@@ -168,22 +224,24 @@ http://smart.city/microservices/stadtverwaltung/anträge
 
 **Customer event channel**
 
-| **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
+| **Anfrageart**| **Name** | **ID** | 
+| :------ | :----- | :------ | 
+| schoolkid accepted | string school | int id |
+| schoolkid rejected | string school | int id |
+| club accepted |string clubname | int id |
+| club rejected| string clubname | int id |
 
 **Contract event channel**
 
 | **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | 
+| :------ | :----- | :----- |
 | Contract Received | int id |
 | Contract Deleted | int id |
 
 ### Queries
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+| :------ | :----- | :------ | :------ |
 | getContracts() | - | Contract [] list |
 | getContract() | int id | Contract c |
 
@@ -253,8 +311,8 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
-  -Vue.js
+  - Vue.js
 * Backend
-  -Springboot
+  - Springboot
 * Datenbank
-  -postgreSql
+  - postgreSql
