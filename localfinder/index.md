@@ -61,7 +61,7 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 ## Schnittstellen
 
-- OpenStreetMap: API wird hier zur Suche von Lokalen genutzt
+- OpenStreetMap: OverpassAPI wird hier zur Suche von Lokalen genutzt
 
 ### URL
 
@@ -77,14 +77,19 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 ### Commands
 
+**Synchronous**
+| **Name** | **Parameter** | **Resultat** |
+| :------- | :------------ | :----------- |
+| SearchRequest() | String destination, String startingLocation, int area | JSON [] Location |
+| downloadFile()  | int locationId, String filename                       | File file |
+
+
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------- | :------------ | :----------- |
-| SearchRequest()      | String destination, String startingLocation, int area | JSON [] Location |
-| downloadFile()       | int locationId, String filename | File file |
-| requestReservation() | int userId, Date date, int localId | - |
-| registerLocal()      | JSON location, String email, String telnumber | - |
+| requestReservation() | int userId, Date date, int localId                      | - |
+| registerLocal()      | JSON location{user.id, location.name, location.address} | - |
 
 
 ### Events
@@ -93,13 +98,13 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 | **Name** | **Payload** |
 | :------- | :---------- |
-| Toggle Favourite | int userId, int localId |
+| Toggle Favorite | int userId, int localId |
 
 **Local event channel**
 
 | **Name** | **Payload** |
 | :------- | :---------- |
-| Accept Reservation  | int reservationId |
+| Accept  Reservation | int reservationId |
 | Decline Reservation | int reservationId |
 
 
@@ -114,7 +119,7 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 
 | **Name** | **Parameter** | **Resultat** |
 | :------- | :------------ | :----------- |
-| getReservations() | int id | JSON [] reservations  |
+| getReservations() | int localId | JSON [] reservations  |
 | getFavorites()    | int userId | JSON [] locations |
 
 ### Dependencies
@@ -128,9 +133,9 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
-| :------ | :----- |
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
+| :---------- | :----------- |
+| Sending Local authentication request | local.auth.create |
+| Listening on Local authentication status | local.auth.status |
 
 
 ## Technische Umsetzung
@@ -160,10 +165,9 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 ### Validierung
 
 * Postman wird zum Testen der REST API verwendet
-* Das Frontend testet erste Zugriffe mit db.json
 
 ### Verwendete Technologien
 
-* Vue.js 
-* SpringBoot
-* postgreSql
+* Vue.js mit router und axios
+* flask mit sqlalchemy, pika
+* postgreSql 
