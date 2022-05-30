@@ -357,7 +357,7 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
   "custmer_id":"20"
   "firstname": "Max"
   "lastname": "Mustermann"
-  "payment_reciever": "Smart Rent"
+  "payment_receiver": "Smart Rent"
   "payment_bank": "DE2392032302309"
   "payment_price": "20"
 }
