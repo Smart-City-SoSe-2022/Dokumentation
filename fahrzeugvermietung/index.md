@@ -347,7 +347,7 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 | **Service** | **Funktion** | **Routing Key** | Query type |
 | :------ | :----- | :----- | :----- |
 | Send Payment Data | sendPaymentData() | bank.payment.received | Senden |
-| Authenticate Payment | getBillPaid() | bank.payment.status.< service > |Hören |
+| Authenticate Payment | getBillPaid() | bank.payment.status.fahrzeugvermietung |Hören |
  | Customer Created Service | createCustomer() | portal.account.created | Hören |
  | Customer Deleted Service | deleteCustomer() | portal.account.deleted | Hören |
 
