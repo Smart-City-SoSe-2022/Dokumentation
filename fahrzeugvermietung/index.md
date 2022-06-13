@@ -175,8 +175,14 @@ public boolean createVehicle( int vehicleID,
                               ) {return boolean;}
 ```
 
+#### Fahrzeug betrachten
+GET http://localhost:8080/fahrzeugvermietung/fahrzeug
+```
+public Vehicle getVehicle(int ID){return vehicle;}
+```
+
 #### Mietvertrag erstellen
-POST http://localhost:8080/fahrzeugvermietung/fahrzeug/id?={id}
+POST http://localhost:8080/fahrzeugvermietung/fahrzeug/{id}
 ```
 {
   "customer_id": "11"
@@ -196,7 +202,7 @@ rabbitMQ:
 ```
 
 #### Mietvertrag bearbeiten
-POST http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/id?={id}
+POST http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/{id}
 ```
 {
   "customer_id": "11"
@@ -216,7 +222,7 @@ rabbitMQ:
 ```
 
 #### Rechnung löschen
-DELETE http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/id?={id}
+DELETE http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/{id}
 ```
 {
   "customer_id": "11"
