@@ -1,6 +1,6 @@
 # Projektübersicht *Smart City*
 
-**Autor:** Daniel Fast
+**Autor:** Daniel Fast & Luca Humke
 
 ## Beschreibung
 
@@ -76,10 +76,36 @@ Zur Nutzung des Portals möchte der Nutzer sich anmelden. Falls der Nutzer noch 
 
 ### URL
 
-#### Holen von Daten eines Accounts
+#### Holen von Daten eines Accounts nach Login
 GET /portal/get
-```
+
 Geht nur nach Anmeldung, Cookie wird benötigt
+```
+{
+    "id": 1,
+    "forename": "Daniel",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Straßenweg 12",
+    "plz": "32584",
+    "email": "dancoding@gmx.net",
+}
+```
+
+#### Holen von Daten eines Accounts als Microservice
+GET /portal/get/\<user_id>
+
+Geht nur als Microservice mit dem speziellen JWT
+```
+{
+    "id": 1,
+    "forename": "Daniel",
+    "lastname": "Man",
+    "gender": "männlich",
+    "address": "Straßenweg 12",
+    "plz": "32584",
+    "email": "dancoding@gmx.net",
+}
 ```
 
 #### Erstellung eines Accounts
