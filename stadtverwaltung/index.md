@@ -30,10 +30,6 @@
 ### Use-Case Verwaltung
  ![](media/uc-verwaltung.jpg)
 
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
 
 ## Anforderungen im Detail
 
@@ -42,9 +38,9 @@
 
 | **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :-------| :------ | :----- | :------ | :-------- |
-| Schulen ansehen | Nutzer | einsehen welche Schulen es in der Umgebung gibt | ich informationen erhalte für welche ich mich entscheide | Eine Liste von möglichen Schulen |
-| Sprechstunden ansehen | Nutzer | einsehen, wann man ein zoom meeting vereinbaren kann | ich informationen erhalte für welche ich mich entscheide | Uhrzeiten mit den möglichen Sprechstunden |
-| Eintragen in Wartelisten | Nutzer | mich in eine Warteliste eintragen | ich mein Kind auf die gewünschte Schule schicken kann | alle nötigen Daten angeben mit Dokumenten, für die Einreihung in eine Warteliste |
+| Schulen ansehen | Nutzer | einsehen welche Schulen es in der Umgebung gibt | ich informationen erhalte welche Schulen es schon gibt | Eine Liste von möglichen Schulen |
+| Sprechstunden ansehen | Nutzer | einsehen, wann man ein zoom meeting vereinbaren kann | ich informationen erhalten kann | Uhrzeiten mit den möglichen Sprechstunden |
+| Eintragen in Wartelisten | Nutzer | mich in eine Warteliste eintragen | ich meine Schule eintragen kann | alle nötigen Daten angeben, für die Einreihung in eine Warteliste |
 
 **Verwaltung User-Stories für Schulverwaltung**
 
@@ -52,7 +48,7 @@
 | :------ | :------ | :----- | :------ | :-------- |
 | Schulen ansehen | Verwaltung | die Schulen in der Umgebung bearbeiten | ich die Liste immer aktuell halte | bearbeitung der Liste zum ergänzen oder löschen von Schulen |
 | Sprechstunden ansehen | Verwaltung | die Zeiten für die Sprechstunden anpassen | ich die Zeiten immer aktuell halte | anpassen der Zeiten |
-| Eintragen in Wartelisten | Verwaltung | einsehen welche Anträge angekommen sind | ich die gewünschten Kinder, wenn Platz verfügbar ist in die Schulen aufnehmen kann | Annahmen von Kindern bei genügend Platz  |
+| Eintragen in Wartelisten | Verwaltung | einsehen welche Anträge angekommen sind | ich die gewünschte Schule eintragen kann | Annahmen von Schule  |
 
 **Nutzer User-Stories für Vereine**
 
@@ -70,19 +66,6 @@
 | Voraussetzungen bearbeiten | Verwaltung | die Voraussetungen anpassen können | man immer die aktuellen Voraussetzungen hat | Alle nötigen Informationen zum Gründen von einem Verein |
 | Warteliste ansehen und bearbeiten | Verwaltung | einsehen welche Anträge angekommen sind | ich diese bearbeiten kann | Eine liste der eingetragenen Vereine zum an oder ablehnen |
 
-**Fehlereingaben**
-
-| **Name**| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :------ | :----- | :------ | :-------- |
-| Fehler bei nicht ausgefülltem Feld | Nutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich weiß warum es zum Fehler kam | Lösung wird angezeigt |
-
-
-**Beispiel**
-
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
-
 ## Graphische Benutzerschnittstelle
 
 ### Stadtverwaltung
@@ -90,28 +73,22 @@
 ### Startseite für Schulverwaltung
  ![](media/Mu-schulverwaltung.jpg)
 ### Sprechstunden
- ![](media/Mu-sprech.jpg)
-### Eintrag auf die Warteliste für Vereine
- ![](media/Mu-eintragschule.jpg)
+ ![](media/Mu-sprech.jpg) 
+### Eintrag auf die Warteliste für Schulen
+ ![](media/Mu-schule.jpg)
+### Schulen in der Umgebung
+ ![](media/Mu-schul-um.jpg)
 ### Startseite für Vereine
  ![](media/Mu-verein.jpg)
 ### Voraussetzungen für Vereine
  ![](media/Mu-voraus.jpg)
 ### Eintrag auf die Warteliste für Vereine
- ![](media/Mu-eintragverein.jpg)
+ ![](media/Mu.eintragverein.jpg)
+### Vereine in der Umgebung
+ ![](media/Mu-verein-um.jpg)
 ### Verwaltung der Anträge für Schule und Vereine
  ![](media/Mu-antragbearbeiten.jpg)
 
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
-
-
-## Datenmodell 
-
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
 
 ## Abläufe
 
@@ -126,7 +103,7 @@
 ## Schnittstellen
 
 #### Verein erstellen 
-POST http://localhost:8080/stadtverwaltung/createclub
+POST http://localhost:8080/stadtverwaltung/create-club
 ```
 {
   "club_id": "12"
@@ -148,21 +125,25 @@ public boolean createclub(int clubID,
 ```
 
 #### Schule erstellen 
-POST http://localhost:8080/stadtverwaltung/createschool
+POST http://localhost:8080/stadtverwaltung/create-school
 ```
 {
   "school_id": "14"
   "school_name": "Grundschule von Bergen"
   "founder": "Dakota Bergen"
+  "teacher": "24"
+  "classrooms": "24"
 }
 public boolean createclub(int schoolID,
                                   String clubName,
                                   String founder,
+                                  int teacher,
+                                  int classrooms
                                   ) 
 ```
 
 #### Verein Löschen
-DELETE http://localhost:8080/stadtverwaltung/deleteclub
+DELETE http://localhost:8080/stadtverwaltung/delete-club
 ```
 {
   "club_id": "12"
@@ -177,19 +158,48 @@ public boolean deleteclub(int clubID)
 ```
 
 #### Schule Löschen
-DELETE http://localhost:8080/stadtverwaltung/deleteclub
+DELETE http://localhost:8080/stadtverwaltung/delete-school
 ```
 {
-  "school_id": "24"
+  "school_id": "14"
   "school_name": "Grundschule von Bergen"
   "founder": "Dakota Bergen"
+  "teacher": "24"
+  "classrooms": "24"
+}
+public boolean deleteschool(int schoolID) 
+```
+#### Vereins Liste Anzeigen
+GET http://localhost:8080/stadtverwaltung/club-list
+```
+{
+  "club_id": "12"
+  "club_name": "Basketballverein"
+  "founder": "Max Detroit"
+  "member": "20"
+  "task": "Basketball"
+  "finacing": "Beiträge"
+  "description": "Wir sind ein Verein für Basketball"
+}
+public boolean deleteclub(int clubID) 
+```
+
+#### Schul Liste Anzeigen
+GET http://localhost:8080/stadtverwaltung/school-list
+```
+{
+  "school_id": "14"
+  "school_name": "Grundschule von Bergen"
+  "founder": "Dakota Bergen"
+  "teacher": "24"
+  "classrooms": "24"
 }
 public boolean deleteschool(int schoolID) 
 ```
 
 **Beispiele:**
 
-### URL für alle Funktionen
+### URL für alle Seiten der Stadtverwaltung
 
 http://smart.city/microservices/stadtverwaltung <br>
 http://smart.city/microservices/stadtverwaltung/schulverwaltung <br>
@@ -212,13 +222,16 @@ http://smart.city/microservices/stadtverwaltung/anträge <br>
 |DELETE| deleteschool() | String  schoolname | int id |
 |POST| createclub() | String clubname | int id |
 |DELETE| deleteclub() | String clubname | int id |
+|GET| clublist() | String clubname | int id |
+|GET| schoollist() | String clubname | int id |
+
 
 **Asynchronous**
 
 | **Anfrageart**| **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+| GET | getCustomer() | String Customer | int id |
+
 
 ### Events
 
@@ -226,85 +239,21 @@ http://smart.city/microservices/stadtverwaltung/anträge <br>
 
 | **Anfrageart**| **Name** | **ID** | 
 | :------ | :----- | :------ | 
-| schoolkid accepted | string school | int id |
-| schoolkid rejected | string school | int id |
+| school accepted | string school | int id |
+| school rejected | string school | int id |
 | club accepted |string clubname | int id |
 | club rejected| string clubname | int id |
 
-**Contract event channel**
-
-| **Anfrageart**| **Name** | **Payload** | 
-| :------ | :----- | :----- |
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
-| **Anfrageart**| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
-
-### Dependencies
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
-
-
 ## Technische Umsetzung
 
+### Fehlerbehandlung
 
-### Softwarearchitektur
-
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
-
-* Server
-  * Web-Schicht
-  * Logik-Schicht
-  * Persistenz-Schicht
-
-* Client
-  * View-Schicht
-  * Logik-Schicht
-  * Kommunikation-Schicht
-
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
-
-
-
-### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
-
-### Fehlerbehandlung 
-
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
-
-### Validierung
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
+- Fehlende Daten in der Datenbank durch das eintragen eines Verein oder einer Schule.
+  - Eine Exception damit man keine null Werte in der Datenbank hat.
+- Fehler beim ausführen des Backends mit der Datenbank.
+  - Den richtigen Namen, Passwort und Usernamen für die Datenbank als variable eingeben.
+- Daten werden nicht richtig in der Datenbank gespeichert durch das anwenden vom Frontend.
+  - Beim Frontend auf groß und klein Schreibung achten, damit die **Parameter** genau so heißen wie im Backend.
 
 ### Verwendete Technologien
 
@@ -316,3 +265,10 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   - Springboot
 * Datenbank
   - postgreSql
+* Verwendete Programme
+  - Visual Studio Code
+  - Intellij
+  - DBeaver
+  - Docker
+  - Postman
+  - RabbitMQ
