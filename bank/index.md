@@ -58,31 +58,20 @@
 ![ER MODELL](https://user-images.githubusercontent.com/85035651/163670979-a801632b-f69b-43be-8d7c-15812aa51151.png)
 
 
-## Abläufe
-
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
-
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
-
-**Beispiel:**
-
 ### URL
 
-http://smart.city/microservices/bank/{KundenID}
+Abrufen aller Überweisungen von dem Aktuellen Konto 
+GET //http://smart.city/microservices/bank/api/Debit/Get/{id}
+
+Abrufen des Aktuellen Kontostandes
+GET //http://smart.city/microservices/bank/api/Debit/Balance/Get/{id}
+
+Erstellen einer Überweisung 
+GET //http://smart.city/microservices/bank/creat/{id}/{balance}/{reason}
+
 
 ### Commands
 
@@ -91,8 +80,15 @@ http://smart.city/microservices/bank/{KundenID}
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| getBalance() | int id | int id |
+| getBalance() | int id | jsonstring balance |
+| Getdebit() | int id | jsonstring alldebit |
+
+**Asynchronous**
+
+| **Name** | **Parameter** | **Resultat** |
+| :------ | :----- | :------ |
 | creatdebit() | int accountnumber,int Balance | int id |
+
 
 
 
