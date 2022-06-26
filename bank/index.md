@@ -13,7 +13,7 @@
 
 * Welche Akteure Haben wir ?
 * -Der Kunde ist ein Nutzer der Seite, welcher auf der Seite sein Wertanlagen verwalten möchte.
-* -Der Mitarbeiter wiederum Unterstützt den Kunden und genehmigt Kredite. 
+
 
 
 ![Use case bild](https://user-images.githubusercontent.com/85035651/163670969-405655d4-05e7-4e99-9aa7-9215399a9f5a.png)
@@ -42,11 +42,6 @@
 | Kunde | einen Kredit aufnehemen | ich mehr Geld auf meinem Konte besitze | Kreditanfrage wird erstellt |
 
 
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Wer | Was | Warum | Wann akzeptiert |
-| Mitarbeiter | Kreditanfragen sehen | ich diese annehmen oder ablehnen kann   | Kreditanfrage wird genehmigt oder abgelehnt  |
-| Mitarbeiter | Kundendaten einsehen können | ich geld auszahlen zu kann  | Mitarbeiter sieht Kunden Daten |
 
 
 ## Graphische Benutzerschnittstelle
@@ -63,47 +58,40 @@
 ![ER MODELL](https://user-images.githubusercontent.com/85035651/163670979-a801632b-f69b-43be-8d7c-15812aa51151.png)
 
 
-## Abläufe
-
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
-
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
-
-**Beispiel:**
-
 ### URL
 
-http://smart.city/microservices/bank/{KundenID}
+- Abrufen aller Überweisungen von dem Aktuellen Konto 
+- GET //http://smart.city/microservices/bank/api/Debit/Get/{id}
+
+- Abrufen des Aktuellen Kontostandes
+- GET //http://smart.city/microservices/bank/api/Debit/Balance/Get/{id}
+
+- Erstellen einer Überweisung 
+- GET //http://smart.city/microservices/bank/creat/{id}/{balance}/{reason}
+
 
 ### Commands
 
+
+**synchronous**
+
+| **Name** | **Parameter** | **Resultat** |
+| :------ | :----- | :------ |
+| getBalance() | int id | jsonstring balance |
+| Getdebit() | int id | jsonstring alldebit |
 
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| getBalance() | int id | int id |
-| getCustomer() | int id | int id |
 | creatdebit() | int accountnumber,int Balance | int id |
 
 
-**Queries**
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
+
+
 
 
 
@@ -131,27 +119,6 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 
 
-### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
-
-### Fehlerbehandlung 
-
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
-
-### Validierung
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
-
 ### Verwendete Technologien
 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
@@ -164,4 +131,4 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   - .NET
 * Datenbank
   - Datagrip
-  - MySQL
+  - PostgreSQL
