@@ -91,7 +91,6 @@ Es werden mehrere Programmiersprachen für die Entwicklung verwendet. Jedes Team
 
 #### Datenbank
 Verwendete Datenbanken:
-- MySQL
 - PostgreSQL
 
 #### Frameworks
@@ -99,13 +98,12 @@ Verwendete Datenbanken:
 Wie auch bei den Programmiersprachen, kommen für jedes Repository eigene Frameworks zum Einsatz. Diese sind folgende: <br>
 Frontend:
 - React
-- Svelte
 - Vue
 
 Backend:
 - SpringBoot
-- Express
-- Django
+- Flask
+- ASP.NET Core
 
 #### Kommunikationstechnologie zwischen Microservices
 
@@ -125,7 +123,6 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 | Luca Humke  | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
 | Daniel Fast | Software Engineer | Microservice Portal / Authentifizierung |
 | Marcel Sander | Software Engineer | Microservice [Banksystem](bank/index) |
-| Oskar Schaubert | Software Engineer | Microservice [Bibliothek](bibliothek/index) |
 | Abdurakhman Vaysert | Software Engineer | Microservice [Fahrzeugvermietung](fahrzeugvermietung/index) |
 | Vadim Balysev | Software Engineer | Microservice [Stadtverwaltung](stadtverwaltung/index) |
 | Rene Braun | Software Engineer | Microservice [Local-Finder](localfinder/index) |
@@ -136,4 +133,4 @@ Für das Logging wird RabbitMQ genutzt. Damit wird ein globales Errorlogging dur
 
 * **Abgabe Spezifikation:** KW 16 18.04.2022
 * **Erster Prototyp (MVP):** KW 22 30.05.2022
-* **Softwareprojektabgabe:** Ende Juni 2022 / Anfang Juli 2022
+* **Softwareprojektabgabe:** KW 26 27.06.2022

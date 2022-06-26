@@ -131,4 +131,4 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   - .NET
 * Datenbank
   - Datagrip
-  - MySQL
+  - PostgreSQL

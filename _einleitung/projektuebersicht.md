@@ -181,7 +181,7 @@ Die Events werden über RabbitMQ verschickt und empfangen. Folgend sind die Rout
 
 #### Normen
 
-Damit das Portal konkurrenzfähig und qualitativ ist, setzen wir die Webanwendung nach dem ISO 25010[^1] Standard durch.
+Damit das Portal konkurrenzfähig und qualitativ ist, setzen wir die Webanwendung nach dem ISO 25010[^1]. Standard durch.
 
 #### Standards und Protokolle
 
@@ -221,13 +221,6 @@ Stabilität |X|-|-|-|
 Prüfbarkeit |X|-|-|-|
 
 
-## Glossar 
-
-- Definitionen, Abkürzungen, Begriffe
-
 ## Referenzen
-
-* Handbücher, Gesetze
-* z.B. Datenschutzgrundverordnung
 
 [^1]: ISO 2510: https://iso25000.com/index.php/en/iso-25000-standards/iso-25010
