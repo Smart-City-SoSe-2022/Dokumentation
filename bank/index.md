@@ -63,14 +63,14 @@
 
 ### URL
 
-Abrufen aller Überweisungen von dem Aktuellen Konto 
-GET //http://smart.city/microservices/bank/api/Debit/Get/{id}
+- Abrufen aller Überweisungen von dem Aktuellen Konto 
+- GET //http://smart.city/microservices/bank/api/Debit/Get/{id}
 
-Abrufen des Aktuellen Kontostandes
-GET //http://smart.city/microservices/bank/api/Debit/Balance/Get/{id}
+- Abrufen des Aktuellen Kontostandes
+- GET //http://smart.city/microservices/bank/api/Debit/Balance/Get/{id}
 
-Erstellen einer Überweisung 
-GET //http://smart.city/microservices/bank/creat/{id}/{balance}/{reason}
+- Erstellen einer Überweisung 
+- GET //http://smart.city/microservices/bank/creat/{id}/{balance}/{reason}
 
 
 ### Commands
