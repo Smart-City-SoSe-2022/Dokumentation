@@ -29,7 +29,6 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 | Reservieren   | User    | einen Termin reservieren      | ich einen Termin mit dem Lokal ausmachen kann  | Die Reservierung wurde an das Lokal weitergeleitet |
 | Lokal registrieren       | Lokal | möchte ich mein Lokal registrieren und den Account erstellen | User Reservierungen vornehmen können | Lokaldaten wurden angegeben |
 | Reservierung bearbeiten  | Lokal | eingegangene Reservierungen annehmen/ablehenen | beim User eine Antwort vorliegt | Die Reservierung wird nicht mehr angezeigt und der User hat eine Bestätigung per E-Mail erhalten |
-| Lokal verifizieren | Admin | Lokale verifizieren und den zugehörigen Account freischalten | Lokale die jeweiligen Funktionen nutzen können | Account wurde freigegeben |
 
 ## Graphische Benutzerschnittstelle
 
@@ -78,6 +77,7 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 ### Commands
 
 **Synchronous**
+
 | **Name** | **Parameter** | **Resultat** |
 | :------- | :------------ | :----------- |
 | SearchRequest() | String destination, String startingLocation, int area | JSON [] Location |
@@ -108,7 +108,7 @@ Local Finder bietet den Usern die Möglichkeit nach Freizeitaktivitäten in der 
 | Decline Reservation | int reservationId |
 
 
-**Admin event channel**
+**Stadtverwaltung event channel**
 
 | **Name** | **Payload** |
 | :------- | :---------- |
