@@ -89,30 +89,10 @@ Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
 POST
 ```
 {
-  "firstname": "Abdurakhman"
-  "lastname": "Vaysert"
-  "salution": "Herr"
-  "birthdate": "03.11.1996"
-  "address": "Musterstraße 3"
-  "city": "Minden"
-  "zipcode": "32425"
-  "tel": "0123456789"
+  "id": "1"
 }
-public boolean register(String firstname,
-                        String lastname,
-                        String salution,
-                        Date birthdate,
-                        String address,
-                        String city,
-                        int zipCode,
-                        int tel
+public boolean register(Long customerID,
                         ) {return boolean;}
-```
-
-#### Accountdaten holen
-GET http://localhost:8080/fahrzeugvermietung/
-```
-public Customer getCustomer(Cookie cookie){return customer;}
 ```
 
 #### Mietbare Fahrzeuge laden
@@ -323,7 +303,7 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
-| POST | createCustomer() | int customerID , String lastname, String firstname, String address, String salution, String city, int zipcode, int tel, Date birthdate | boolean registered |
+| POST | createCustomer() | int customerID | boolean registered |
 |DELETE| deleteOrder() | int customerID, vehicleID | boolean deleted |
 |POST| createVehicles()| int vehicleID, int lessorID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| boolean created|
 
@@ -361,8 +341,6 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 ```
 {
   "custmer_id":"20"
-  "firstname": "Max"
-  "lastname": "Mustermann"
   "payment_receiver": "Smart Rent"
   "payment_bank": "DE2392032302309"
   "payment_price": "20"
