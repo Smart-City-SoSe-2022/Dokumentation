@@ -52,7 +52,7 @@ Die Fahrzeuge sind alle schnell einsehbar und mit wenigen klicks gemietet.
 ### Fahrzeugauswahl betrachten vom Sicht des Vermieters:
  ![Fahrzeugauswahl bearbeiten GUI-Mockup](media/VermieterFahrzeugauswahl.png)
  [Fahrzeug ausstellen](#vermieter-user-stories)
-### Fahrzeug bearbeiten oder neues Hinzufügen vom Sicht des Vermieters:
+### neues Fahrzeug Hinzufügen vom Sicht des Vermieters:
  ![Fahrzeug bearbeiten GUI-Mockup](media/FahrzeugBearbeiten.png)
  [Fahrzeug ausstellen](#vermieter-user-stories)
 ### Betrachten der vermieteten Fahrzeuge:
@@ -197,18 +197,9 @@ public boolean changeRentContract(int customerID,
 rabbitMQ:
   public void sendPaymentData(int customerID,
                               int priceToPay,
-                              int smartRentID
+                              String smartRentName,
+                              String smartRentBLZ
                               ){}
-```
-
-#### Rechnung löschen
-DELETE http://localhost:8080/fahrzeugvermietung/gemietete_fahrzeuge/{id}
-```
-{
-  "customer_id": "11"
-  "vehicle_id": "3"
-}
-public boolean deleteOrder(int customerID, int vehicleID){return boolean;}
 ```
 
 #### Meine gemieteten Fahrzeuge anzeigen
@@ -304,8 +295,7 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
 | POST | createCustomer() | int customerID | boolean registered |
-|DELETE| deleteOrder() | int customerID, vehicleID | boolean deleted |
-|POST| createVehicles()| int vehicleID, int lessorID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| boolean created|
+|POST| createVehicles()| int vehicleID, String type, String vehicleModell, String vehicleColor, int vehicleDistance, int vehicleMaxSpeed, int vehicleMileage, int priceDay, int priceWeek, int priceMonth| boolean created|
 
 
 **Asynchronous**
@@ -313,7 +303,6 @@ public Vehicle getContractsMyRentVehicles()(int customerID){return listAllRentVe
 || **Name** | **Parameter** | **Resultat** |
 |:-| :------ | :----- | :------ |
 |POST| createRentContract() | int customerID, int vehicleID, int priceOption | boolean result |
-|PUT| changeRentContract() | int customerID, int vehicleID | boolean result |
 || changeVehicleRentable() | int customerID, int vehicleID| |
 |rabbitMQ| sendPaymentData()| int customerID, int priceToPay, int smartRentID| boolean result|
 |rabbitMQ| getBillPaid()| int customerID, int smartRentID| boolean result|
